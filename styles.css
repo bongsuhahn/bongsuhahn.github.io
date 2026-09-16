@@ -304,6 +304,9 @@
 /* Keep the longer Research introduction balanced across lines. */
 #research-title { text-wrap: balance; }
 
+/* Font-independent, monochrome Research icons, including on mobile Safari. */
+#research .research-symbol { display: block; width: 33px; height: 33px; flex: 0 0 33px; color: var(--accent); }
+
 /* Align featured-card content without inserting title line breaks. */
 #projects .project-grid { align-items: stretch; }
 #projects .project-body h3 { min-height: 4.2em; }
