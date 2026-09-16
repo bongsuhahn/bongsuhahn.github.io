@@ -1,0 +1,10 @@
+/* Names only; add entries to .alumni-names in alumni.html. */
+.alumni-page .alumni-intro .eyebrow { margin-top: 40px; }
+.alumni-page main { min-height: 65vh; }
+.alumni-page .alumni-names { list-style: none; padding: 0; margin: 35px 0 65px; max-width: 800px; }
+.alumni-page .alumni-names li { padding: 22px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: 25px; color: var(--ink); }
+.alumni-page .alumni-names:empty { margin: 0; }
+@media (max-width: 600px) {
+  .alumni-page .alumni-intro .eyebrow { margin-top: 30px; }
+  .alumni-page .alumni-names li { font-size: 23px; }
+}

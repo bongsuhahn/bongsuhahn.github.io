@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bongsu Hahn and the Robotic Control Systems Laboratory (ROCOS): research in control systems, mobile robotics, autonomous navigation, and data-driven modeling and estimation.">
+  <meta name="theme-color" content="#173b4b">
+  <title>Bongsu Hahn | ROCOS Laboratory</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="ROCOS Laboratory home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ROCOS<span class="brand-caption">ROBOTIC CONTROL SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#home" aria-current="location">Home</a><a href="#about">PI</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#members">Members</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="home-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-line"></span> CONTROL · ROBOTICS · AUTONOMY</p>
+          <h1 id="home-title" class="lab-title"><span class="lab-title-line">Robotic <span class="title-phrase">Control Systems</span></span> <span class="lab-title-line">Laboratory <span class="lab-acronym">(ROCOS)</span></span></h1>
+          <p class="hero-attribution">Bongsu Hahn, Principal Investigator</p>
+          <p class="affiliation">[Academic title] <span aria-hidden="true">/</span> [Department, University]</p>
+          <p class="hero-description">Understanding complex systems.<br>Advancing intelligent motion.</p>
+          <p class="intro">ROCOS brings together control systems, mobile robotics, autonomous navigation, and data-driven modeling to develop intelligent systems that can perceive, estimate, decide, and act in dynamic environments.</p>
+          <div class="actions"><a class="button button-primary" href="#research">Explore our research <span aria-hidden="true">↗</span></a><a class="text-link" href="#publications">View publications <span aria-hidden="true">→</span></a></div>
+        </div>
+        <figure class="hero-figure">
+          <div class="figure-label"><span>CONNECTED SYSTEMS / RESEARCH PERSPECTIVE</span><span class="figure-cross" aria-hidden="true">+</span></div>
+          <svg class="robotics-figure" viewBox="0 0 520 440" role="img" aria-labelledby="diagram-title diagram-description">
+            <title id="diagram-title">An integrated cycle of intelligent autonomy</title>
+            <desc id="diagram-description">A connected schematic of control systems, mobile robotics, autonomous navigation, and data-driven modeling and estimation. Sensing leads to state estimation, decision and planning, feedback control, and robot motion. Motion feeds back to sensing. A data-driven model uses sensing data and informs both estimation and control. An uncertainty ellipse, planned trajectory, and control-response curve illustrate the connected research themes.</desc>
+            <defs>
+              <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="#385665" stroke-width=".7"/></pattern>
+              <marker id="cycle-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="m1 1 5 3-5 3" fill="none" stroke="#a6d4c6" stroke-width="1.2"/></marker>
+              <marker id="model-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="m1 1 5 3-5 3" fill="none" stroke="#8fa9b3" stroke-width="1.2"/></marker>
+            </defs>
+            <rect x="28" y="30" width="464" height="365" fill="url(#grid)"/>
+            <!-- One continuous cycle; the central model informs estimation and control. -->
+            <g fill="none" stroke="#a6d4c6" stroke-width="1.3" marker-end="url(#cycle-arrow)">
+              <path d="M119 130H194"/><path d="M299 130H384"/>
+              <path d="M451 147V291Q451 306 436 306H407"/>
+              <path d="M324 306H191"/>
+              <path d="M112 306H57Q40 306 40 289V147Q40 130 56 130H64"/>
+            </g>
+            <!-- Sensing: geometric sensor waves. -->
+            <g fill="none" stroke="#a6d4c6" stroke-width="1.4"><circle cx="78" cy="130" r="4" fill="#a6d4c6"/><path d="M87 118a17 17 0 0 1 0 24M95 110a28 28 0 0 1 0 40M103 102a40 40 0 0 1 0 56"/></g>
+            <!-- State estimate with an uncertainty region and observations. -->
+            <g fill="none"><path d="M209 149H288M216 155V102" stroke="#67818b"/><ellipse cx="251" cy="129" rx="30" ry="14" transform="rotate(-28 251 129)" fill="#80c5bb" fill-opacity=".1" stroke="#699e9b" stroke-dasharray="3 4"/><path d="M221 144Q238 115 253 131T284 113" stroke="#a6d4c6" stroke-width="1.8"/><path d="M251 120v18M242 129h18" stroke="#d5e6e5"/></g>
+            <g fill="#8fa9b3"><circle cx="229" cy="137" r="2"/><circle cx="241" cy="120" r="2"/><circle cx="267" cy="137" r="2"/><circle cx="280" cy="118" r="2"/></g>
+            <!-- Planning: a feasible trajectory through a spatial constraint. -->
+            <path d="M393 146C409 146 399 112 419 113S438 137 449 107" fill="none" stroke="#a6d4c6" stroke-width="1.8" stroke-dasharray="4 4"/>
+            <path d="m421 133 11 6v13l-11-6Z" fill="#294a5a" stroke="#67818b"/><circle cx="449" cy="104" r="6" fill="none" stroke="#d5e6e5"/><circle cx="393" cy="146" r="3" fill="#a6d4c6"/>
+            <g class="schematic-stage" text-anchor="middle"><text x="88" y="180">SENSE</text><text x="250" y="180">ESTIMATE</text><text x="426" y="180">PLAN</text></g>
+            <!-- Data-driven model: a compact state representation, not a network icon. -->
+            <path d="M88 195V229Q88 240 99 240H196" fill="none" stroke="#8fa9b3" stroke-width="1.2" stroke-dasharray="3 4" marker-end="url(#model-arrow)"/>
+            <g fill="none" stroke="#a6d4c6" stroke-width="1.5" marker-end="url(#cycle-arrow)"><path d="M250 220V192"/><path d="M302 240H355Q365 240 365 250V282"/></g>
+            <rect x="198" y="220" width="104" height="40" rx="2" fill="#1e4252" stroke="#699e9b"/>
+            <g fill="none" stroke="#a6d4c6" stroke-width="1.3"><path d="M215 230h-5v20h5M285 230h5v20h-5"/><path d="M227 247v-8M239 247v-16M251 247v-11M263 247v-20M275 247v-13"/></g>
+            <g fill="#a6d4c6"><circle cx="250" cy="220" r="2"/><circle cx="302" cy="240" r="2"/></g>
+            <text x="250" y="280" class="schematic-model" text-anchor="middle">DATA-DRIVEN MODEL</text>
+            <!-- Control: reference input and a settling response. -->
+            <g fill="none"><path d="M333 327H400M337 329V285" stroke="#67818b"/><path d="M338 320v-24h60" stroke="#8fa9b3" stroke-dasharray="3 4"/><path d="M338 320C347 320 345 277 358 291S369 300 377 297S389 296 398 296" stroke="#a6d4c6" stroke-width="1.8"/></g>
+            <!-- Motion: a restrained mobile platform and its local trajectory. -->
+            <path d="M110 326Q129 328 146 310T183 290" fill="none" stroke="#699e9b" stroke-dasharray="3 4"/>
+            <g transform="translate(151 305) rotate(32)"><rect x="-23" y="-20" width="7" height="15" rx="2" fill="#8fa9b3"/><rect x="-23" y="6" width="7" height="15" rx="2" fill="#8fa9b3"/><rect x="16" y="-20" width="7" height="15" rx="2" fill="#8fa9b3"/><rect x="16" y="6" width="7" height="15" rx="2" fill="#8fa9b3"/><rect x="-16" y="-23" width="32" height="46" rx="6" fill="#294a5a" stroke="#c5ded8" stroke-width="1.4"/><circle r="8" fill="#173b4b" stroke="#a6d4c6"/><path d="m-4-12 4-5 4 5" fill="none" stroke="#d5e6e5"/></g>
+            <g class="schematic-stage" text-anchor="middle"><text x="151" y="353">ACT</text><text x="365" y="353">CONTROL</text></g>
+            <path d="M112 383H405" stroke="#43606c" stroke-width=".8"/>
+            <text x="260" y="403" class="schematic-note" text-anchor="middle">MOTION · OBSERVATION · FEEDBACK</text>
+          </svg>
+          <figcaption><span>Sense <span aria-hidden="true">→</span> Estimate <span aria-hidden="true">→</span> Plan <span aria-hidden="true">→</span> Control <span aria-hidden="true">→</span> Act</span><span>01 / AUTONOMY</span></figcaption>
+        </figure>
+      </div>
+      <div class="container hero-bottom"><span>ROBOTIC CONTROL SYSTEMS LABORATORY</span><a href="https://www.hongik.ac.kr" target="_blank" rel="noopener noreferrer">HONGIK UNIVERSITY</a></div>
+    </section>
+
+    <section id="about" class="section pi-profile" aria-labelledby="about-title">
+      <div class="container section-split">
+        <div class="pi-profile-identity">
+          <p class="eyebrow">01 / PRINCIPAL INVESTIGATOR</p>
+          <h2 id="about-title">Control at the core.<br>Intelligence through discovery.</h2>
+          <h3 class="pi-profile-name">Bongsu Hahn</h3>
+          <img class="pi-profile-portrait" src="assets/picture_hahn.png" alt="Portrait of Bongsu Hahn" width="1098" height="1433" loading="lazy" decoding="async">
+          <p class="pi-profile-affiliation"><strong>Associate Professor</strong>Department of Mechanical &amp; Design Engineering<br>Hongik University</p>
+          <p class="pi-profile-role">Principal Investigator, ROCOS</p>
+        </div>
+        <div class="pi-profile-content">
+          <div class="pi-profile-group">
+            <h3>Biography</h3>
+            <p>Bongsu Hahn is the Principal Investigator of the Robotic Control Systems Laboratory (ROCOS). His research focuses on control systems, mobile robotics, autonomous navigation, and data-driven modeling and estimation. He is particularly interested in how model-based reasoning and data-driven learning can complement one another to improve the autonomy, robustness, and adaptability of intelligent engineering systems. At the core of his research is the view that reliable intelligence should emerge from a careful integration of physical understanding, feedback, estimation, and data. His work spans theoretical development, dynamic modeling, algorithm design, and experimental validation, with an emphasis on translating rigorous system-level understanding into practical engineering applications.</p>
+          </div>
+          <div class="pi-profile-group">
+            <h3>Research Interests</h3>
+            <ul class="tags"><li>Control Systems</li><li>Mobile Robotics</li><li>Autonomous Navigation</li><li>Data-Driven Modeling and Estimation</li></ul>
+          </div>
+          <!-- PI profile: Keep each list in reverse chronological order. -->
+          <div class="pi-profile-group">
+            <h3>Education</h3>
+            <ul class="pi-history">
+              <li><span class="pi-history-date">2007–2012</span><div><h4>Ph.D. in Mechanical Engineering</h4><p>University of Michigan, Ann Arbor, MI, USA</p></div></li>
+              <li><span class="pi-history-date">2000–2002</span><div><h4>M.S. in Mechatronics Engineering</h4><p>Gwangju Institute of Science and Technology (GIST), Gwangju, Korea</p></div></li>
+            </ul>
+          </div>
+          <div class="pi-profile-group">
+            <h3>Academic Appointments</h3>
+            <ul class="pi-history">
+              <li><span class="pi-history-date">2024–Present</span><div><h4>Associate Professor</h4><p>Department of Mechanical &amp; Design Engineering<br>Hongik University, Korea</p></div></li>
+              <li><span class="pi-history-date">2014–2024</span><div><h4>Assistant Professor and Associate Professor</h4><p>School of Mechanical &amp; Automotive Engineering<br>Kyungil University, Korea</p></div></li>
+            </ul>
+          </div>
+          <div class="pi-profile-group">
+            <h3>Professional &amp; Research Experience</h3>
+            <ul class="pi-history">
+              <li><span class="pi-history-date">2012–2014</span><div><h4>Senior Research Scientist</h4><p>Actuation and Control Systems Laboratory for Missile Guidance Control<br>Agency for Defense Development (ADD), Korea</p></div></li>
+              <li><span class="pi-history-date">2007–2012</span><div><h4>Research Assistant, Mechanical Engineering</h4><p>University of Michigan, Ann Arbor, MI, USA</p></div></li>
+              <li><span class="pi-history-date">2002–2007</span><div><h4>Senior Research Scientist</h4><p>Actuation and Control Systems Laboratory for Missile Guidance Control<br>Agency for Defense Development (ADD), Korea</p></div></li>
+              <li><span class="pi-history-date">2000–2002</span><div><h4>Research Assistant</h4><p>Gwangju Institute of Science and Technology (GIST), Korea</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section section-tinted" aria-labelledby="research-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">02 / RESEARCH</p><h2 id="research-title">Four areas. One connected view of intelligent systems.</h2></div><p>From dynamics and estimation to robotics and autonomous decision-making.</p></div>
+        <div class="research-grid">
+          <a class="research-card" href="research/control-systems.html" aria-labelledby="research-control-systems-title"><div class="card-top"><span class="research-symbol" aria-hidden="true">↔</span><span>AREA 01</span></div><h3 id="research-control-systems-title">Control Systems</h3><p>Investigating how feedback and system dynamics can inform precise, stable, and reliable behavior in complex systems.</p><div class="card-keywords">Feedback · Dynamics · Stability</div><ol class="research-micro" aria-label="Conceptual sequence"><li>Model</li><li>Feedback</li><li>Stability</li></ol><span class="research-view">View area <span aria-hidden="true">→</span></span></a>
+          <a class="research-card" href="research/mobile-robotics.html" aria-labelledby="research-mobile-robotics-title"><div class="card-top"><span class="research-symbol" aria-hidden="true">⊙</span><span>AREA 02</span></div><h3 id="research-mobile-robotics-title">Mobile Robotics</h3><p>Exploring the interaction of sensing, motion, and control to enable mobile robots to operate in changing environments.</p><div class="card-keywords">Sensing · Motion · Interaction</div><ol class="research-micro" aria-label="Conceptual sequence"><li>Sense</li><li>Move</li><li>Interact</li></ol><span class="research-view">View area <span aria-hidden="true">→</span></span></a>
+          <a class="research-card" href="research/autonomous-navigation.html" aria-labelledby="research-autonomous-navigation-title"><div class="card-top"><span class="research-symbol" aria-hidden="true">↗</span><span>AREA 03</span></div><h3 id="research-autonomous-navigation-title">Autonomous Navigation</h3><p>Studying how autonomous systems understand their surroundings, plan feasible paths, and navigate with confidence.</p><div class="card-keywords">Localization · Planning · Navigation</div><ol class="research-micro" aria-label="Conceptual sequence"><li>Perceive</li><li>Localize</li><li>Plan</li><li>Navigate</li></ol><span class="research-view">View area <span aria-hidden="true">→</span></span></a>
+          <a class="research-card" href="research/data-driven-modeling-estimation.html" aria-labelledby="research-data-driven-modeling-estimation-title"><div class="card-top"><span class="research-symbol" aria-hidden="true">∿</span><span>AREA 04</span></div><h3 id="research-data-driven-modeling-estimation-title">Data-Driven Modeling<br>&amp; Estimation</h3><p>Connecting measured data with mathematical models to estimate hidden states and understand system behavior.</p><div class="card-keywords">System Identification · State Estimation</div><ol class="research-micro" aria-label="Conceptual sequence"><li>Data</li><li>Model</li><li>Estimate</li><li>Infer</li></ol><span class="research-view">View area <span aria-hidden="true">→</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section publications-section" aria-labelledby="publications-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / PUBLICATIONS</p><h2 id="publications-title">Publications &amp; Manuscripts</h2></div>
+          <p>Published research and ongoing manuscripts across control, robotics, intelligent systems, and data-driven engineering.</p>
+        </div>
+        <section class="publication-group" aria-labelledby="published-title">
+          <h3 id="published-title">A / PUBLISHED</h3>
+          <!-- Retain all supplied venues. Group papers by year and preserve the explicit author markers. -->
+          <div class="publication-list">
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2026">
+              <h4 class="publication-year" id="publications-2026">2026</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>HybridDWAVO: Finite-Horizon Velocity-Obstacle Filtering within the Dynamic Window Approach for Dynamic Obstacle Avoidance</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">SIMULATION, OnlineFirst, 2026.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1177/00375497261480361" target="_blank" rel="noopener noreferrer" aria-label="DOI for HybridDWAVO: Finite-Horizon Velocity-Obstacle Filtering within the Dynamic Window Approach for Dynamic Obstacle Avoidance (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Two-Stage Probabilistic Framework with Validity Screening and Physics-Informed Trend Modeling for Lithium-Ion Battery Health Estimation from Short Discharge Transients</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of Energy Storage, Vol. 169, Article 122763, 2026.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1016/j.est.2026.122763" target="_blank" rel="noopener noreferrer" aria-label="DOI for A Two-Stage Probabilistic Framework with Validity Screening and Physics-Informed Trend Modeling for Lithium-Ion Battery Health Estimation from Short Discharge Transients (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Sensorless Human-Intent-Based Power-Assist Control for Indoor Cooperative Transport via Interaction Estimation and Compliant Motion Generation</h5>
+                    <p class="publication-authors">S. J. Kim and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Robotica, First View, pp. 1–39, 2026.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1017/S026357472610383X" target="_blank" rel="noopener noreferrer" aria-label="DOI for Sensorless Human-Intent-Based Power-Assist Control for Indoor Cooperative Transport via Interaction Estimation and Compliant Motion Generation (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Numerical Investigation of the Effect of Weir Installation Angle on the Air-Separation Performance of a Self-Priming Pump</h5>
+                    <p class="publication-authors">M. Kim, M. Kim, <strong>B. Hahn</strong><sup>*</sup>, and J. Kim</p>
+                    <p class="citation">Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering, OnlineFirst, 2026.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1177/09544089261471962" target="_blank" rel="noopener noreferrer" aria-label="DOI for Numerical Investigation of the Effect of Weir Installation Angle on the Air-Separation Performance of a Self-Priming Pump (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Explainable Integration of Process and Optical Parameters for Plasma Etch Depth Prediction</h5>
+                    <p class="publication-authors">J. Myung, E. Go, D. Cho, M. Ko, N. Jeon, J. Kim, <strong>B. Hahn</strong>, Y. Jung, H.-U. Kim, and J. Kim</p>
+                    <p class="citation">Journal of Vacuum Science &amp; Technology A, Vol. 44, No. 2, Article 023408, 2026.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1116/6.0005255" target="_blank" rel="noopener noreferrer" aria-label="DOI for Explainable Integration of Process and Optical Parameters for Plasma Etch Depth Prediction (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2025">
+              <h4 class="publication-year" id="publications-2025">2025</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Enhancing Obstacle Avoidance in Dynamic Window Approach via Dynamic Obstacle Behavior Prediction</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Actuators, Vol. 14, No. 5, Article 207, 2025.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.3390/act14050207" target="_blank" rel="noopener noreferrer" aria-label="DOI for Enhancing Obstacle Avoidance in Dynamic Window Approach via Dynamic Obstacle Behavior Prediction (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Sensorless Control Framework for Human Intention Based Power Assist Robots</h5>
+                    <p class="publication-authors">S. J. Kim and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">2025 25th International Conference on Control, Automation and Systems (ICCAS), 2025.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.23919/ICCAS66577.2025.11301288" target="_blank" rel="noopener noreferrer" aria-label="DOI for A Sensorless Control Framework for Human Intention Based Power Assist Robots (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2023">
+              <h4 class="publication-year" id="publications-2023">2023</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Force-Fighting Phenomena and Disturbance Rejection in Aircraft Dual-Redundant Electro-Mechanical Actuation Systems</h5>
+                    <p class="publication-authors">Y. T. Han, S.-D. Im, and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Actuators, Vol. 12, No. 8, Article 310, 2023.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.3390/act12080310" target="_blank" rel="noopener noreferrer" aria-label="DOI for Force-Fighting Phenomena and Disturbance Rejection in Aircraft Dual-Redundant Electro-Mechanical Actuation Systems (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>The Design of a Low-Cost Sensing and Control Architecture for a Search and Rescue Assistant Robot</h5>
+                    <p class="publication-authors">T. H. Kim, S. H. Bae, C. H. Han, and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Machines, Vol. 11, No. 3, Article 329, 2023.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.3390/machines11030329" target="_blank" rel="noopener noreferrer" aria-label="DOI for The Design of a Low-Cost Sensing and Control Architecture for a Search and Rescue Assistant Robot (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2022">
+              <h4 class="publication-year" id="publications-2022">2022</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Research and Conceptual Design of Sensor Fusion for Object Detection in Dense Smoke Environments</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Applied Sciences, Vol. 12, No. 22, Article 11325, 2022.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.3390/app122211325" target="_blank" rel="noopener noreferrer" aria-label="DOI for Research and Conceptual Design of Sensor Fusion for Object Detection in Dense Smoke Environments (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <details class="earlier-publications">
+              <summary class="earlier-publications-toggle" aria-controls="earlier-publications-content">
+                <span class="earlier-publications-show">VIEW EARLIER PUBLICATIONS · 2011–2021</span>
+                <span class="earlier-publications-hide">HIDE EARLIER PUBLICATIONS</span>
+                <span class="earlier-publications-symbol" aria-hidden="true"></span>
+              </summary>
+              <div id="earlier-publications-content">
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2021">
+              <h4 class="publication-year" id="publications-2021">2021</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Review and Novel Concept Design of Micro-Rotary Actuators</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of the Korea Academia-Industrial Cooperation Society, Vol. 22, No. 8, pp. 673–680, 2021.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.5762/KAIS.2021.22.8.673" target="_blank" rel="noopener noreferrer" aria-label="DOI for A Review and Novel Concept Design of Micro-Rotary Actuators (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2020">
+              <h4 class="publication-year" id="publications-2020">2020</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Position Estimator Design for a MEMS Top-Drive Electrostatic Rotary Actuator</h5>
+                    <p class="publication-authors">J. Woo, <strong>B. Hahn</strong>, and C. Ahn</p>
+                    <p class="citation">Sensors, Vol. 20, No. 24, Article 7081, 2020.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.3390/s20247081" target="_blank" rel="noopener noreferrer" aria-label="DOI for Position Estimator Design for a MEMS Top-Drive Electrostatic Rotary Actuator (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Angle Estimator Design for Electrostatic Rotary Actuator</h5>
+                    <p class="publication-authors">J. Woo, C. Ahn, and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">SICE Annual Conference 2020, Chiang Mai, Thailand, 2020.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2019">
+              <h4 class="publication-year" id="publications-2019">2019</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Digital Current Control Using Single DC-Link Current Sensing of BLDC Actuation Systems</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of the Korea Institute of Military Science and Technology, Vol. 22, No. 1, pp. 72–80, 2019.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2018">
+              <h4 class="publication-year" id="publications-2018">2018</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Control Model of Electrostatic Rotary Actuator</h5>
+                    <p class="publication-authors">J. Woo, C. Ahn, and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">18th International Conference on Control, Automation and Systems (ICCAS), 2018.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2017">
+              <h4 class="publication-year" id="publications-2017">2017</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A User Following Control System for Displays</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of Institute of Control, Robotics and Systems, Vol. 23, No. 11, pp. 955–962, 2017.</p>
+                  </div>
+
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Performance and Power/Energy Consumption in Microrobotic Servo Systems: Iterative Adaptive On-Off Controllers vs. LQG/PWM Controllers</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of Institute of Control, Robotics and Systems, Vol. 23, No. 2, pp. 102–108, 2017.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2016">
+              <h4 class="publication-year" id="publications-2016">2016</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Design of an In-Pipe Mobile Robot with Screw Drive Mechanism Using Control Moment Gyroscopes</h5>
+                    <p class="publication-authors">D. Ahn and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">ICROS Annual Conference, pp. 339–340, 2016.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2015">
+              <h4 class="publication-year" id="publications-2015">2015</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Active Prevention Strategy for Rollover of Cargo Crane Trucks Using a Control Moment Gyro</h5>
+                    <p class="publication-authors">Y. Jang, J. Cheon, S. Lim, and <strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">ICROS Annual Conference, pp. 131–132, 2015.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2014">
+              <h4 class="publication-year" id="publications-2014">2014</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Convergence and Energy Analysis for Iterative Adaptive ON-OFF Control of Piezoelectric Microactuators</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong> and K. Oldham</p>
+                    <p class="citation">IEEE Transactions on Control Systems Technology, Vol. 22, No. 3, pp. 1052–1060, 2014.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1109/TCST.2013.2273259" target="_blank" rel="noopener noreferrer" aria-label="DOI for Convergence and Energy Analysis for Iterative Adaptive ON-OFF Control of Piezoelectric Microactuators (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Sensing Parameter Selection Strategy for Ultra-Low-Power Micro-Servosystem Identification</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong><sup>*</sup></p>
+                    <p class="citation">Journal of Institute of Control, Robotics and Systems, Vol. 20, No. 8, pp. 849–853, 2014.</p>
+                  </div>
+
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Controller for Minimizing Roll Moment in an Attitude Control System with Thrusters Using Asymmetric Nozzle Throats</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong> and D.-Y. Lee</p>
+                    <p class="citation">ICROS Annual Conference, pp. 484–485, 2014.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2013">
+              <h4 class="publication-year" id="publications-2013">2013</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Sensing Strategies to Reduce Power Consumption of Recursive-Least-Squares Parameter Identification of Autonomous Microsystems</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong> and K. Oldham</p>
+                    <p class="citation">American Control Conference (ACC), 2013.</p>
+                  </div>
+
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2012">
+              <h4 class="publication-year" id="publications-2012">2012</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>On-Off Iterative Adaptive Controller for Low-Power Micro-Robotic Step Regulation</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong> and K. Oldham</p>
+                    <p class="citation">Asian Journal of Control, Vol. 14, No. 3, pp. 624–640, 2012.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1002/asjc.410" target="_blank" rel="noopener noreferrer" aria-label="DOI for On-Off Iterative Adaptive Controller for Low-Power Micro-Robotic Step Regulation (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>A Model-Free ON-OFF Iterative Adaptive Controller Based on Stochastic Approximation</h5>
+                    <p class="publication-authors"><strong>B. Hahn</strong> and K. Oldham</p>
+                    <p class="citation">IEEE Transactions on Control Systems Technology, Vol. 20, No. 1, pp. 196–204, 2012.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1109/TCST.2011.2104360" target="_blank" rel="noopener noreferrer" aria-label="DOI for A Model-Free ON-OFF Iterative Adaptive Controller Based on Stochastic Approximation (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+            <div class="publication-year-group" role="group" aria-labelledby="publications-2011">
+              <h4 class="publication-year" id="publications-2011">2011</h4>
+              <div class="publication-year-entries">
+                <article class="publication">
+                  <div class="publication-content">
+                    <h5>Modeling and Optimal Low-Power On-Off Control of Thin-Film Piezoelectric Rotational Actuators</h5>
+                    <p class="publication-authors">B. Edamana, <strong>B. Hahn</strong>, J. Pulskamp, R. Polcawich, and K. Oldham</p>
+                    <p class="citation">IEEE/ASME Transactions on Mechatronics, Vol. 16, No. 5, pp. 884–896, 2011.</p>
+                  </div>
+                  <a class="publication-doi" href="https://doi.org/10.1109/TMECH.2010.2053041" target="_blank" rel="noopener noreferrer" aria-label="DOI for Modeling and Optimal Low-Power On-Off Control of Thin-Film Piezoelectric Rotational Actuators (opens in a new tab)">DOI <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
+            </div>
+              </div>
+            </details>
+          </div>
+          <p class="corresponding-author-note">* Corresponding author</p>
+        </section>
+        <section class="publication-group" aria-labelledby="under-review-title">
+          <h3 id="under-review-title">B / UNDER REVIEW</h3>
+          <!-- Manuscript lists intentionally contain titles only. -->
+          <ul class="manuscript-list">
+            <li><h4>Observability-Informed Adaptive Deep Koopman Modeling for Battery Monitoring</h4></li>
+            <li><h4>Observability-Informed Low-Order Nonlinear State-Space Modeling and Estimation for Plasma Etching</h4></li>
+            <li><h4>Steady-State Parameter-Space Analysis for Interpretable Fault Diagnosis of Centrifugal Pumps</h4></li>
+            <li><h4>Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte</h4></li>
+            <li><h4>Adaptive Endpoint Detection Modeling under Limited and Imbalanced Plasma Etching Data</h4></li>
+          </ul>
+        </section>
+        <section class="publication-group" aria-labelledby="in-preparation-title">
+          <h3 id="in-preparation-title">C / IN PREPARATION</h3>
+          <ul class="manuscript-list">
+            <li><h4>OES-Supported State-Constrained Recipe Optimization for Mean Thickness and Uniformity Control in Plasma Etching</h4></li>
+            <li><h4>Uncertainty-Calibrated Risk-Aware Predictive Dynamic Window Approach for Dynamic Obstacle Avoidance</h4></li>
+            <li><h4>Data-Driven Dynamic Modeling and Sensorless Joint-Torque Estimation for Collision-Aware Control of a Six-DOF Manipulator</h4></li>
+            <li><h4>Learning-Assisted Localization Correction for Resource-Constrained Visual SLAM with Sparse Map Representations</h4></li>
+            <li><h4>Data-Driven Local Obstacle Avoidance for Mobile Robots via Supervised Learning and Reinforcement Learning</h4></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-tinted" aria-labelledby="projects-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">04 / PROJECTS</p><h2 id="projects-title">Research in practice</h2></div><p>Turning research questions into models, methods, and experiments.</p></div>
+        <!-- Each card links to a standalone static project page. -->
+        <div class="project-grid">
+          <a class="project-card" href="projects/omnidirectional-mobility.html" aria-labelledby="project-card-01-title"><div class="project-banner"><span>CONTROL &amp; ROBOTICS</span><span aria-hidden="true">PROJECT 01</span></div><div class="project-body"><h3 id="project-card-01-title">AI-Driven Omnidirectional Mobility for Confined Manufacturing</h3><p>Vision AI, Sim-to-Real deep reinforcement learning, and adaptive sensor fusion for agile omnidirectional mobile robots operating in narrow manufacturing spaces.</p><dl><div><dt>Period</dt><dd>2026.07 – 2027.12</dd></div><div><dt>Role</dt><dd>Research Lead, Hongik University</dd></div></dl></div></a>
+          <a class="project-card" href="projects/gps-free-navigation.html" aria-labelledby="project-card-02-title"><div class="project-banner"><span>NAVIGATION &amp; AUTONOMY</span><span aria-hidden="true">PROJECT 02</span></div><div class="project-body"><h3 id="project-card-02-title">Vision–CAD Fusion for GPS-Free Autonomous Navigation</h3><p>Fusing digital-twin maps with stereo vision for global localization, drift correction, dynamic obstacle avoidance, and resilient navigation in infrastructure-limited environments.</p><dl><div><dt>Period</dt><dd>2026.04 – 2028.03</dd></div><div><dt>Role</dt><dd>Principal Investigator, Hongik University</dd></div></dl></div></a>
+          <a class="project-card" href="projects/pump-fault-diagnosis.html" aria-labelledby="project-card-03-title"><div class="project-banner"><span>MODELING &amp; ESTIMATION</span><span aria-hidden="true">PROJECT 03</span></div><div class="project-body"><h3 id="project-card-03-title">Interpretable Parameter-Space Fault Diagnosis of Centrifugal Pumps</h3><p>Physics-guided steady-state modeling and parameter estimation for interpretable detection and classification of centrifugal-pump faults.</p><dl><div><dt>Period</dt><dd>2025.06 – 2025.11</dd></div><div><dt>Role</dt><dd>Lead Researcher</dd></div></dl></div></a>
+        </div>
+        <a class="project-archive-link" href="projects/archive.html">VIEW ALL PROJECTS <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section id="members" class="section" aria-labelledby="members-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">05 / MEMBERS</p><h2 id="members-title">Current members</h2></div><p>Researchers exploring control, robotics, autonomy, and intelligent systems.</p></div>
+        <!-- Replace a complete placeholder div with an img using class="member-photo member-portrait", alt="Portrait of [name]", width="640", height="400", and loading="lazy". Shared portrait sizing preserves the card layout. -->
+        <section class="current-member-group" aria-labelledby="graduate-students-title">
+          <h3 id="graduate-students-title" class="group-heading">Graduate Students</h3>
+          <div class="current-member-grid">
+            <article class="member-card"><div class="photo-placeholder member-portrait" role="img" aria-label="Photo placeholder for Seong Jin Kim"><span class="portrait-icon" aria-hidden="true"></span><span aria-hidden="true">PHOTO PLACEHOLDER</span></div><div class="member-details"><h4>Seong Jin Kim</h4><p class="member-position">M.S. Student</p><p>Visual SLAM · Human–Robot Cooperative Control</p></div></article>
+          </div>
+        </section>
+        <section class="current-member-group" aria-labelledby="undergraduate-researchers-title">
+          <h3 id="undergraduate-researchers-title" class="group-heading">Undergraduate Researchers</h3>
+          <div class="current-member-grid">
+            <article class="member-card"><div class="photo-placeholder member-portrait" role="img" aria-label="Photo placeholder for Jaehoon Sim"><span class="portrait-icon" aria-hidden="true"></span><span aria-hidden="true">PHOTO PLACEHOLDER</span></div><div class="member-details"><h4>Jaehoon Sim</h4><p class="member-position">Undergraduate Researcher</p><p>Mobile Robot Obstacle Avoidance · Environmental Perception</p></div></article>
+            <article class="member-card"><div class="photo-placeholder member-portrait" role="img" aria-label="Photo placeholder for Minseok Kim"><span class="portrait-icon" aria-hidden="true"></span><span aria-hidden="true">PHOTO PLACEHOLDER</span></div><div class="member-details"><h4>Minseok Kim</h4><p class="member-position">Undergraduate Researcher</p><p>Data-Driven Robot Dynamics Modeling · Sensorless Disturbance Control</p></div></article>
+          </div>
+        </section>
+        <a class="members-alumni-link" href="members/alumni.html">ALUMNI <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section id="teaching" class="section section-tinted" aria-labelledby="teaching-title">
+      <div class="container section-split"><div><p class="eyebrow">06 / TEACHING</p><h2 id="teaching-title">Learning through<br>theory and exploration.</h2><p class="section-lead muted">Connecting foundational ideas with research questions and practical experience.</p></div><div class="teaching-content">
+          <h3>Courses</h3>
+          <section class="teaching-semester" aria-labelledby="spring-courses-title">
+            <h4 id="spring-courses-title">SPRING</h4>
+            <ul class="teaching-courses">
+              <li>Mechanisms and Kinematics</li>
+              <li>Introduction to Physical AI</li>
+              <li>Smart System Control</li>
+            </ul>
+          </section>
+          <section class="teaching-semester" aria-labelledby="fall-courses-title">
+            <h4 id="fall-courses-title">FALL</h4>
+            <ul class="teaching-courses">
+              <li>Introduction to Robotics</li>
+              <li>Mechatronics Laboratory</li>
+            </ul>
+          </section>
+        </div></div>
+    </section>
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container section-split"><div><p class="eyebrow">07 / CONTACT</p><h2 id="contact-title">Start a conversation.</h2><p class="section-lead">For research discussions, academic collaboration, and student inquiries.</p><p class="contact-lab">Bongsu Hahn<br>Robotic Control Systems Laboratory (ROCOS)</p></div><div><dl class="contact-details"><div><dt>AFFILIATION</dt><dd>Department of Mechanical &amp; Design Engineering<br>Hongik University</dd></div><div><dt>EMAIL</dt><dd><a href="mailto:hahn@hongik.ac.kr">hahn@hongik.ac.kr</a></dd></div><div><dt>OFFICE</dt><dd>Building D, Room 202<br>Sejong-ro, Sejong 30016, Republic of Korea<br>Tel. <a href="tel:+82448602581">+82-44-860-2581</a></dd></div></dl></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#home">ROCOS<span>Robotic Control Systems Laboratory</span></a><p>© <span id="copyright-year">2026</span> Bongsu Hahn. All rights reserved.</p><a href="#home" class="back-top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
