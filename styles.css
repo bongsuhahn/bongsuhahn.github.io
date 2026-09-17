@@ -355,3 +355,16 @@
   #home .hero-bottom > span,
   #home .hero-bottom > a { font-size: 7px; letter-spacing: 1px; }
 }
+
+/* Shared footer: balanced laboratory and institutional identities. */
+.site-footer .footer-inner { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: start; gap: 25px; }
+.site-footer .footer-inner > p { order: initial; width: auto; margin: 0; padding-top: 8px; border: 0; text-align: center; }
+.site-footer .footer-institution { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; justify-self: end; padding-top: 4px; }
+.site-footer .footer-wordmark { display: block; width: 210px; max-width: 100%; aspect-ratio: 1654 / 114; background-color: var(--ink); -webkit-mask: url('assets/hongik-university-wordmark.png') center / contain no-repeat; mask: url('assets/hongik-university-wordmark.png') center / contain no-repeat; }
+.site-footer .back-top { font-size: 10px; color: var(--muted); }
+.site-footer .back-top:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 850px) {
+  .site-footer .footer-inner { grid-template-columns: minmax(0,1fr); gap: 22px; }
+  .site-footer .footer-inner > p { text-align: left; padding-top: 0; }
+  .site-footer .footer-institution { padding-top: 0; }
+}
