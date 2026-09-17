@@ -329,10 +329,13 @@
 }
 
 /* Home: clear laboratory hierarchy and understated student recruitment. */
-#home .hero-description { margin-top: 32px; }
-#home .hero-recruitment { max-width: 460px; margin-top: 20px; font-size: 13.5px; line-height: 1.7; }
-#home .hero-recruitment a { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
-#home .hero-recruitment a:hover { color: var(--ink); }
+#home .hero-description { margin-top: 32px; font-family: var(--sans); font-size: 18px; font-weight: 600; letter-spacing: normal; line-height: 1.45; color: var(--ink); }
+#home .intro { margin-top: 22px; font-family: var(--sans); font-size: 15px; font-weight: 400; letter-spacing: normal; line-height: 1.85; color: var(--muted); }
+#home .hero-recruitment { max-width: 460px; margin-top: 28px; font-family: var(--sans); font-size: 14px; font-weight: 400; line-height: 1.6; }
+#home .hero-recruitment a { display: inline-block; padding-block: 2px; color: var(--accent); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+#home .hero-recruitment a:hover { color: var(--ink); text-decoration-thickness: 2px; }
+#home .hero-recruitment a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; text-decoration-thickness: 2px; }
+#home .actions { margin-top: 24px; }
 #home .hero-bottom > span,
 #home .hero-bottom > a { font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: 1.5px; color: var(--accent); opacity: 1; line-height: 1.75; }
 @media (max-width: 850px) {
