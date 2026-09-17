@@ -12,6 +12,11 @@
 .project-page .project-meta { display: flex; gap: 25px 40px; flex-wrap: wrap; margin: 28px 0 0; padding-top: 20px; border-top: 1px solid var(--line); }
 .project-page dt { font-size: 9px; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 5px; }
 .project-page dd { font-size: 12px; }
+.project-page .project-meta[data-project] { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1.5fr); gap: 20px; }
+.project-page .project-meta[data-project] > div { min-width: 0; }
+@media (max-width: 850px) {
+  .project-page .project-meta[data-project] { grid-template-columns: minmax(0,1fr); }
+}
 .project-page .concept-art { background: var(--navy); color: #d5e6e5; padding: 22px; }
 .project-page .concept-art svg { display: block; width: 100%; height: auto; }
 .project-page .concept-art figcaption { margin: 0; color: #b0d2c8; font-size: 9px; letter-spacing: 1px; }

@@ -20,3 +20,20 @@ document.addEventListener('keydown', event => {
 });
 window.matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
 document.querySelector('#copyright-year').textContent = new Date().getFullYear();
+
+// Keep detail metadata synchronized with the archive's shared project records.
+// Static HTML retains the same information when JavaScript is unavailable.
+document.querySelectorAll('.project-meta[data-project]').forEach(metadata => {
+  const project = ROCOS_PROJECTS.find(item => item.slug === metadata.dataset.project);
+  if (!project) return;
+  const fields = [['PERIOD', project.period], ['ROLE', project.role], ['SUPPORTED BY', project.supportedBy]];
+  metadata.replaceChildren(...fields.map(([label, value]) => {
+    const field = document.createElement('div');
+    const term = document.createElement('dt');
+    const description = document.createElement('dd');
+    term.textContent = label;
+    description.textContent = value;
+    field.append(term, description);
+    return field;
+  }));
+});
