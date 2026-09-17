@@ -2,7 +2,7 @@
 document.documentElement.classList.add('js');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#site-nav');
-const navigationLinks = [...navigation.querySelectorAll('a')];
+const navigationLinks = [...navigation.querySelectorAll(':scope > a')];
 
 function closeMenu() {
   menuButton.setAttribute('aria-expanded', 'false');
@@ -60,7 +60,7 @@ document.querySelector('#copyright-year').textContent = new Date().getFullYear()
 document.querySelectorAll('#projects dl[data-project]').forEach(metadata => {
   const project = ROCOS_PROJECTS.find(item => item.slug === metadata.dataset.project);
   if (!project) return;
-  const values = [project.period, project.role, project.supportedBy];
+  const values = [project.period, window.ROCOS_LOCALE?.role || project.role, project.supportedBy];
   metadata.querySelectorAll('dd').forEach((value, index) => {
     value.textContent = values[index];
   });

@@ -17,9 +17,10 @@ function archiveItem(project) {
   const content = document.createElement('div');
   const title = textElement('h2', 'archive-project-title', project.title);
   title.id = 'title-' + project.slug;
-  content.append(title, textElement('p', 'archive-summary', project.summary),
-    textElement('p', 'archive-role', project.role),
-    textElement('span', 'archive-view', 'View project →'));
+  const locale = window.ROCOS_LOCALE;
+  content.append(title, textElement('p', 'archive-summary', locale?.summaries[project.slug] || project.summary),
+    textElement('p', 'archive-role', locale?.role || project.role),
+    textElement('span', 'archive-view', locale?.viewProject || 'View project →'));
   link.append(content);
   item.append(link);
   return item;

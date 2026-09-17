@@ -26,7 +26,8 @@ document.querySelector('#copyright-year').textContent = new Date().getFullYear()
 document.querySelectorAll('.project-meta[data-project]').forEach(metadata => {
   const project = ROCOS_PROJECTS.find(item => item.slug === metadata.dataset.project);
   if (!project) return;
-  const fields = [['PERIOD', project.period], ['ROLE', project.role], ['SUPPORTED BY', project.supportedBy]];
+  const locale = window.ROCOS_LOCALE;
+  const fields = [[locale?.periodLabel || 'PERIOD', project.period], [locale?.roleLabel || 'ROLE', locale?.role || project.role], [locale?.supportLabel || 'SUPPORTED BY', project.supportedBy]];
   metadata.replaceChildren(...fields.map(([label, value]) => {
     const field = document.createElement('div');
     const term = document.createElement('dt');
