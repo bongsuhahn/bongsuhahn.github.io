@@ -98,6 +98,7 @@
 .pi-profile h3 { font-size: 18px; font-weight: 600; line-height: 1.45; margin-bottom: 15px; }
 .pi-profile .pi-profile-group > p { font-size: 15px; line-height: 1.85; }
 .pi-profile .pi-biography { margin-top: 36px; max-width: 46ch; }
+.pi-profile .pi-profile-identity .pi-profile-group + .pi-profile-group { margin-top: 30px; }
 .pi-profile .tags li { font-size: 12px; }
 .pi-profile .pi-history { list-style: none; padding: 0; margin: 0; }
 .pi-profile .pi-history > li {
