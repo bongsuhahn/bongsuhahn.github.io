@@ -364,7 +364,10 @@
 .site-footer .back-top { font-size: 10px; color: var(--muted); }
 .site-footer .back-top:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 850px) {
-  .site-footer .footer-inner { grid-template-columns: minmax(0,1fr); gap: 22px; }
-  .site-footer .footer-inner > p { text-align: left; padding-top: 0; }
-  .site-footer .footer-institution { padding-top: 0; }
+  .site-footer .footer-inner { grid-template-columns: minmax(0,1fr); gap: 0; justify-items: center; align-items: center; text-align: center; }
+  .site-footer .footer-brand { grid-row: 1; }
+  .site-footer .footer-institution { display: contents; }
+  .site-footer .footer-wordmark { grid-row: 2; width: min(60vw,230px); margin-top: 26px; }
+  .site-footer .footer-inner > p { grid-row: 3; text-align: center; padding-top: 0; margin-top: 26px; }
+  .site-footer .back-top { grid-row: 4; margin: 14px 0 0; justify-self: center; }
 }
