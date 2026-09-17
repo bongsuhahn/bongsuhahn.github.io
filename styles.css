@@ -94,6 +94,11 @@
 .pi-profile h2 { font-size: clamp(25px, 2.3vw, 32px); line-height: 1.3; letter-spacing: -.8px; }
 .pi-profile .section-lead { margin-top: 24px; }
 .pi-profile .pi-profile-content { max-width: 620px; }
+/* The introduction occupies its own row; the academic record starts at the name. */
+.pi-profile .section-split { row-gap: 0; }
+.pi-profile .pi-profile-intro { grid-column: 1; min-width: 0; }
+.pi-profile .pi-profile-identity { grid-column: 1; }
+.pi-profile .pi-profile-content { grid-column: 2; grid-row: 2; margin-top: 28px; }
 .pi-profile .pi-profile-group + .pi-profile-group { margin-top: 36px; }
 .pi-profile h3 { font-size: 18px; font-weight: 600; line-height: 1.45; margin-bottom: 15px; }
 .pi-profile .pi-profile-group > p { font-size: 15px; line-height: 1.85; }
@@ -113,12 +118,13 @@
 .pi-profile .pi-history h4 { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 5px; }
 .pi-profile .pi-history p { font-size: 14px; line-height: 1.75; }
 @media (min-width: 851px) and (max-width: 1100px) {
-  .pi-profile .section-split { grid-template-columns: 1fr 1.35fr; gap: 36px; }
+  .pi-profile .section-split { grid-template-columns: 1fr 1.35fr; column-gap: 36px; }
   .pi-profile h2 { font-size: 24px; }
   .pi-profile .pi-history > li { grid-template-columns: 92px minmax(0, 1fr); gap: 16px; }
 }
 @media (max-width: 850px) {
-  .pi-profile .section-split { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .pi-profile .section-split { grid-template-columns: minmax(0, 1fr); column-gap: 36px; }
+  .pi-profile .pi-profile-content { grid-column: 1; grid-row: auto; margin-top: 36px; }
   .pi-profile .pi-biography { max-width: none; }
   .pi-profile h2 { font-size: 32px; }
 }
@@ -128,8 +134,8 @@
   .pi-profile .pi-history > li { grid-template-columns: minmax(0, 1fr); gap: 6px; padding-top: 19px; padding-bottom: 19px; }
 }
 @media print {
-  .pi-profile .section-split { grid-template-columns: 1fr; gap: 20px; }
-  .pi-profile .pi-profile-content { max-width: none; }
+  .pi-profile .section-split { grid-template-columns: 1fr; column-gap: 20px; }
+  .pi-profile .pi-profile-content { max-width: none; grid-column: 1; grid-row: auto; margin-top: 20px; }
   .pi-profile .pi-history > li { break-inside: avoid; }
 }
 /* Publications: journal citations and distinct title-only manuscript lists. */
