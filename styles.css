@@ -89,7 +89,7 @@
 }
 
 /* Principal Investigator profile: scoped to the existing About anchor. */
-.pi-profile .section-split { grid-template-columns: 1fr 1.25fr; }
+.pi-profile .section-split { grid-template-columns: minmax(0,.38fr) minmax(0,.62fr); gap: 72px; align-items: start; }
 .pi-profile .pi-profile-identity, .pi-profile .pi-profile-content { min-width: 0; }
 .pi-profile h2 { font-size: clamp(25px, 2.3vw, 32px); line-height: 1.3; letter-spacing: -.8px; }
 .pi-profile .section-lead { margin-top: 24px; }
@@ -97,6 +97,7 @@
 .pi-profile .pi-profile-group + .pi-profile-group { margin-top: 36px; }
 .pi-profile h3 { font-size: 18px; font-weight: 600; line-height: 1.45; margin-bottom: 15px; }
 .pi-profile .pi-profile-group > p { font-size: 15px; line-height: 1.85; }
+.pi-profile .pi-biography { margin-top: 36px; max-width: 46ch; }
 .pi-profile .tags li { font-size: 12px; }
 .pi-profile .pi-history { list-style: none; padding: 0; margin: 0; }
 .pi-profile .pi-history > li {
@@ -117,6 +118,7 @@
 }
 @media (max-width: 850px) {
   .pi-profile .section-split { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .pi-profile .pi-biography { max-width: none; }
   .pi-profile h2 { font-size: 32px; }
 }
 @media (max-width: 600px) {
