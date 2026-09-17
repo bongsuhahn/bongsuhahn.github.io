@@ -312,14 +312,14 @@
 /* Align featured-card content without inserting title line breaks. */
 #projects .project-grid { align-items: stretch; }
 #projects .project-body h3 { min-height: 4.2em; }
-#projects .project-body dl > div { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 15px; align-items: baseline; }
+#projects .project-body dl > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 15px; align-items: baseline; }
 #projects .project-body dd { margin: 0; text-align: right; }
 @supports (grid-template-rows: subgrid) {
   #projects .project-card { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; }
   #projects .project-body { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; }
   #projects .project-body dl { margin-top: 0; align-self: stretch; }
 }
-@media (min-width: 601px) and (max-width: 850px) {
+@media (max-width: 850px) {
   #projects .project-body dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
   #projects .project-body dd { text-align: left; }
 }

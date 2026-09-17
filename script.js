@@ -55,6 +55,17 @@ if ('IntersectionObserver' in window) {
 
 document.querySelector('#copyright-year').textContent = new Date().getFullYear();
 
+// Featured cards use the same metadata records as the archive and detail pages.
+// Matching static values remain available without JavaScript.
+document.querySelectorAll('#projects dl[data-project]').forEach(metadata => {
+  const project = ROCOS_PROJECTS.find(item => item.slug === metadata.dataset.project);
+  if (!project) return;
+  const values = [project.period, project.role, project.supportedBy];
+  metadata.querySelectorAll('dd').forEach((value, index) => {
+    value.textContent = values[index];
+  });
+});
+
 // Native details/summary supplies keyboard behavior; expose its state explicitly.
 const earlierPublications = document.querySelector('.earlier-publications');
 if (earlierPublications) {
