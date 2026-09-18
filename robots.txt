@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bongsuhahn.github.io/sitemap.xml
