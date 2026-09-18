@@ -1,4 +1,13 @@
 /* Shared static project pages. Palette and typography come from ../styles.css. */
+/* Project identifiers outrank the Roman-numeral section labels. */
+body.project-page:not(.research-page):not(.archive-page) .project-intro .eyebrow { font-size: 15.5px; font-weight: 600; }
+body.project-page:not(.research-page):not(.archive-page) .project-section .eyebrow,
+body.project-page:not(.research-page):not(.archive-page) .project-information .eyebrow { font-size: 14px; font-weight: 600; letter-spacing: .08em; line-height: 1.4; }
+@media (max-width: 600px) {
+  body.project-page:not(.research-page):not(.archive-page) .project-intro .eyebrow { font-size: 14px; }
+  body.project-page:not(.research-page):not(.archive-page) .project-section .eyebrow,
+  body.project-page:not(.research-page):not(.archive-page) .project-information .eyebrow { font-size: 13.5px; }
+}
 .project-page { background: var(--paper); }
 .project-page h1 { font-size: clamp(34px, 3.5vw, 48px); line-height: 1.16; letter-spacing: -1.3px; }
 .project-page h2 { font-size: clamp(28px, 2.7vw, 36px); }
@@ -109,4 +118,66 @@
   .project-page .project-section { padding: 25px 0; }
   .project-page .schematic, .project-page .concept-art { print-color-adjust: exact; }
   .project-page .flow > li, .project-page .component, .project-page .timeline li { break-inside: avoid; }
+}
+
+/* Detail-page readability: shared tokens, with archive and display titles untouched. */
+body.project-page:not(.archive-page) .project-section .eyebrow,
+body.project-page:not(.archive-page) .project-information .eyebrow {
+  font-size: 14.5px; font-weight: 600; letter-spacing: .08em; line-height: 1.4;
+}
+body.research-page .project-intro .eyebrow { font-size: 15.5px; }
+body.project-page:not(.archive-page) .project-summary,
+body.project-page:not(.archive-page) .section-description,
+body.project-page:not(.archive-page) .component ul,
+body.project-page:not(.archive-page) .timeline p:not(.time-label),
+body.project-page:not(.archive-page) .challenge-points p {
+  font-size: var(--text-body); font-weight: 400; line-height: 1.65;
+}
+body.project-page:not(.archive-page) .return-link { font-size: var(--text-secondary-utility); font-weight: 500; line-height: 1.5; }
+body.project-page:not(.archive-page) .component h3,
+body.project-page:not(.archive-page) .challenge-points strong,
+body.project-page:not(.archive-page) .timeline h3,
+body.project-page:not(.archive-page) .parameter-models h3,
+body.project-page:not(.archive-page) .layer strong {
+  font-size: var(--text-secondary-link); font-weight: 600; line-height: 1.5;
+}
+body.project-page:not(.archive-page) .component-index,
+body.project-page:not(.archive-page) .challenge-points span,
+body.project-page:not(.archive-page) .overview-label {
+  font-size: 14px; font-weight: 600; letter-spacing: .07em; line-height: 1.5;
+}
+body.project-page:not(.archive-page) .project-meta dt { font-size: 13.5px; line-height: 1.5; }
+body.project-page:not(.archive-page) .project-meta dd,
+body.project-page:not(.archive-page) .timeline-note,
+body.project-page:not(.archive-page) .analysis-labels,
+body.project-page:not(.archive-page) .integrity-legend {
+  font-size: var(--text-secondary-meta); line-height: 1.6;
+}
+body.project-page:not(.archive-page) .flow strong,
+body.project-page:not(.archive-page) .parallel-sources li {
+  font-size: 13px; font-weight: 500; line-height: 1.6; overflow-wrap: anywhere;
+}
+body.project-page:not(.archive-page) .diagram-caption,
+body.project-page:not(.archive-page) .merge-label,
+body.project-page:not(.archive-page) .layer span,
+body.project-page:not(.archive-page) .concept-art figcaption,
+body.project-page:not(.archive-page) .exchanger-figure figcaption {
+  font-size: 13px; line-height: 1.6;
+}
+body.project-page:not(.archive-page) .feedback-note,
+body.project-page:not(.archive-page) .automation-notes ul { font-size: 15px; line-height: 1.6; }
+body.research-page .research-questions p { font-size: 16px; font-weight: 400; line-height: 1.6; margin-top: 0; }
+body.research-page .research-keywords li,
+body.research-page .related-period,
+body.research-page .related-cue,
+body.research-page .publication-doi { font-size: var(--text-secondary-meta); line-height: 1.6; }
+body.research-page .publication-doi { font-weight: 600; }
+body.research-page .publication-authors { font-size: 16px; font-weight: 500; line-height: 1.6; }
+body.research-page .citation { font-size: 15.5px; font-weight: 400; line-height: 1.6; }
+body.research-page .map-current { font-size: 13.5px; line-height: 1.5; }
+@media (max-width: 600px) {
+  body.project-page:not(.archive-page) { --text-body: 16px; }
+  body.project-page:not(.archive-page) .project-section .eyebrow,
+  body.project-page:not(.archive-page) .project-information .eyebrow { font-size: 13.5px; }
+  body.research-page .project-intro .eyebrow { font-size: 14px; }
 }
