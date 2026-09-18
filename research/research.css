@@ -1,4 +1,17 @@
 /* Research pages reuse the static project layout and the ROCOS palette. */
+/* Related records: compact rows, with only the requested overflow disclosed. */
+.research-page [data-related-projects] > [hidden],
+.research-page [data-related-publications] > .publication[hidden],
+.research-page .related-toggle[hidden] { display: none; }
+.research-page .related-context { font-size: 16px; line-height: 1.65; margin-top: 8px; }
+.research-page .related-project-copy { min-width: 0; }
+.research-page .related-toggle { display: block; width: 100%; margin-top: 24px; padding: 14px 0; border: 0; border-block: 1px solid var(--line); background: transparent; color: var(--accent); font: 600 14px/1.6 var(--sans); letter-spacing: .06em; text-align: left; cursor: pointer; }
+.research-page .related-toggle:hover { text-decoration: underline; text-underline-offset: 4px; }
+.research-page .related-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.research-page .related-fallback { font-size: 16px; }
+.research-page .related-fallback a { text-decoration: underline; }
+.research-page .research-directions { list-style: none; margin: 25px 0 0; padding: 0; }
+.research-page .research-directions li { padding: 18px 0; border-bottom: 1px solid var(--line); font: 400 22px/1.4 var(--serif); color: var(--ink); overflow-wrap: anywhere; }
 .research-page .overview-label { margin-top: 26px; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
 .research-page .project-summary { margin-top: 10px; }
 .research-page .concept-art figcaption { font-size: 12px; line-height: 1.8; letter-spacing: .4px; }
