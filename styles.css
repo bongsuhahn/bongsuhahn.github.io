@@ -387,6 +387,9 @@
 @media (max-width: 850px) {
   .site-footer .footer-inner { grid-template-columns: minmax(0,1fr); gap: 0; justify-items: center; align-items: center; text-align: center; }
   .site-footer .footer-brand { grid-row: 1; }
+  .site-footer .footer-brand .footer-brand-symbol { display: none; }
+  .site-footer .footer-brand .footer-brand-copy { text-align: center; }
+  .site-footer .footer-brand .footer-brand-copy > span::after { content: " LABORATORY"; }
   .site-footer .footer-institution { display: contents; }
   .site-footer .footer-wordmark { grid-row: 2; width: min(60vw,230px); margin-top: 26px; }
   .site-footer .footer-inner > p { grid-row: 3; text-align: center; padding-top: 0; margin-top: 26px; }
