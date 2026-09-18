@@ -24,9 +24,18 @@
     });
   }
 
-  const projects = area.projects.map((relation, index) => {
+  // Sort by the start date, not the archive's end-date ordering. Resolve and
+  // sort a fresh array so neither shared project records nor relations mutate.
+  const startDate = period => {
+    const [, year, month, day = '01'] = period.match(/^(\d{4})\.(\d{2})(?:\.(\d{2}))?/);
+    return Number(year) * 10000 + Number(month) * 100 + Number(day);
+  };
+  const relatedProjects = area.projects.map(relation => {
     const project = ROCOS_PROJECTS.find(record => record.slug === relation.slug);
     if (!project) throw new Error(`Missing related project: ${relation.slug}`);
+    return { relation, project };
+  }).sort((a, b) => startDate(b.project.period) - startDate(a.project.period));
+  const projects = relatedProjects.map(({ relation, project }, index) => {
     const link = element('a');
     link.href = `../projects/${project.slug}.html`;
     link.dataset.additional = String(index >= area.projectLimit);
