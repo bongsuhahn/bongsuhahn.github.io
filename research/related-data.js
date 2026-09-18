@@ -78,7 +78,9 @@ const ROCOS_RESEARCH_RELATIONS = {
       ]
     },
     "directions": [
-      "Data-Driven Dynamic Modeling and Sensorless Joint-Torque Estimation for Collision-Aware Control of a Six-DOF Manipulator"
+      "Uncertainty-Calibrated Risk-Aware Predictive Dynamic Window Approach for Dynamic Obstacle Avoidance",
+      "Data-Driven Local Obstacle Avoidance for Mobile Robots via Supervised Learning and Reinforcement Learning",
+      "Learning-Assisted Localization Correction for Resource-Constrained Visual SLAM with Sparse Map Representations"
     ]
   },
   "autonomous-navigation": {
