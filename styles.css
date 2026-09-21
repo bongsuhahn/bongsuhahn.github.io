@@ -301,13 +301,17 @@
   .project-page .eyebrow { font-size: 10.6px; letter-spacing: 1.3px; line-height: 14.4px; }
 }
 
-/* Current members: consistent cards and interchangeable portrait slots. */
+/* Current members: compact text plates with research interests below. */
 #members .current-member-group + .current-member-group { margin-top: 40px; }
 #members .current-member-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 #members .member-card { display: flex; flex-direction: column; }
-#members .member-portrait { display: flex; width: 100%; aspect-ratio: 1.6; flex-shrink: 0; border-bottom: 1px solid var(--line); }
-#members img.member-portrait { display: block; height: auto; object-fit: cover; }
-#members .member-details { min-height: 160px; }
+#members .member-plate { padding: 20px 23px; background: #edf0eb; border-bottom: 1px solid var(--line); }
+#members .member-plate-label { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .1em; line-height: 1.4; margin-bottom: 10px; }
+#members .member-plate h4 { font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; }
+#members .member-plate .member-position { color: var(--accent); font-size: 15px; line-height: 1.6; margin-top: 4px; }
+#members .member-details { padding: 18px 23px; }
+#members .member-details p { margin: 0; }
+html[lang="ko"] #members .member-card { word-break: keep-all; overflow-wrap: break-word; }
 #members .members-alumni-link { display: inline-flex; align-items: center; gap: 15px; margin-top: 35px; padding: 6px 0; border-bottom: 1px solid #a9b9b4; color: var(--accent); font-size: 11px; letter-spacing: 1.3px; }
 #members .members-alumni-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 1100px) {
@@ -315,7 +319,6 @@
 }
 @media (max-width: 600px) {
   #members .current-member-grid { grid-template-columns: minmax(0, 1fr); }
-  #members .member-portrait { aspect-ratio: 1.8; }
 }
 
 /* Teaching: a compact, semester-grouped editorial course list. */
