@@ -1,0 +1,57 @@
+/* Local Korean typography only. The approved English styles are not edited. */
+html[lang="ko"] {
+  --sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --serif: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif;
+}
+html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
+html[lang="ko"] h1, html[lang="ko"] h2 { line-height: 1.35; letter-spacing: -.035em; text-wrap: balance; }
+html[lang="ko"] .eyebrow { letter-spacing: .06em; }
+html[lang="ko"] .brand, html[lang="ko"] .footer-brand { font-family: Arial, Helvetica, sans-serif; }
+html[lang="ko"] #home .intro,
+html[lang="ko"] #home .hero-recruitment,
+html[lang="ko"] #about .pi-biography > p,
+html[lang="ko"] #research .research-card > p,
+html[lang="ko"] #projects .project-body > p,
+html[lang="ko"] .section-heading > p,
+html[lang="ko"] .section-lead,
+html[lang="ko"] .publications-intro,
+html[lang="ko"] body.project-page .project-summary,
+html[lang="ko"] body.project-page .section-description,
+html[lang="ko"] body.project-page .research-questions p,
+html[lang="ko"] body.project-page .related-context,
+html[lang="ko"] body.archive-page .archive-summary { font-size: 17px; font-weight: 400; line-height: 1.8; }
+html[lang="ko"] #home .hero-description { line-height: 1.65; }
+html[lang="ko"] #home .hero-recruitment { font-size: 16px; }
+html[lang="ko"] #home .intro { max-width: 540px; }
+html[lang="ko"] .project-page .component h3,
+html[lang="ko"] .research-related h3 { line-height: 1.55; }
+html[lang="ko"] #research .research-card h3 { line-height: 1.4; }
+html[lang="ko"] .project-page .project-meta { min-width: 0; }
+html[lang="ko"] .project-page .project-meta dd { overflow-wrap: anywhere; }
+html[lang="ko"] .project-page .flow strong { line-height: 1.65; word-break: keep-all; overflow-wrap: anywhere; }
+html[lang="ko"] .project-page .research-keywords li { line-height: 1.6; }
+/* Official titles and citation typography retain the current English treatment. */
+html[lang="ko"] .publication, html[lang="ko"] .manuscript-list,
+html[lang="ko"] .research-directions, html[lang="ko"] .teaching-courses {
+  --sans: Arial, Helvetica, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+@media (max-width: 600px) {
+  html[lang="ko"] #home .intro,
+  html[lang="ko"] #about .pi-biography > p,
+  html[lang="ko"] #research .research-card > p,
+  html[lang="ko"] #projects .project-body > p,
+  html[lang="ko"] .section-heading > p,
+  html[lang="ko"] .section-lead,
+  html[lang="ko"] body.project-page .project-summary,
+  html[lang="ko"] body.project-page .section-description,
+  html[lang="ko"] body.project-page .research-questions p,
+  html[lang="ko"] body.project-page .related-context,
+  html[lang="ko"] body.archive-page .archive-summary { font-size: 16px; line-height: 1.8; }
+  html[lang="ko"] .hero .eyebrow { flex-wrap: wrap; }
+  html[lang="ko"] #home .lab-title { font-size: clamp(32px, 8.5vw, 42px); }
+  html[lang="ko"] #home .lab-title-line { white-space: normal; }
+  html[lang="ko"] .project-page .project-meta { grid-template-columns: minmax(0, 1fr); }
+}

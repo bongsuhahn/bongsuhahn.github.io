@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="../locale.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="다중 광경로 적외선 가스 검출, 패턴 인식, 무선 통신, 모바일 모니터링을 통합한 저전력 센싱 플랫폼을 다룹니다.">
+  <meta name="theme-color" content="#173b4b">
+  <title>저전력 NDIR 다종 가스 센싱 및 무선 모니터링 | ROCOS</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../projects/project.css">
+  <link rel="stylesheet" href="../../projects/archive.css">
+  <link rel="stylesheet" href="../../language.css?v=54167babe631">
+  <script src="../../language.js?v=55e028ffc378" defer></script>
+  <script src="archive-data.js" defer></script>
+  <script src="../../projects/project.js" defer></script>
+  <link rel="stylesheet" href="../preview.css">
+  <link rel="alternate" hreflang="en" href="https://bongsuhahn.github.io/projects/ndir-multigas-sensing.html">
+  <link rel="alternate" hreflang="ko" href="https://bongsuhahn.github.io/ko/projects/ndir-multigas-sensing.html">
+  <link rel="alternate" hreflang="x-default" href="https://bongsuhahn.github.io/projects/ndir-multigas-sensing.html">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bongsuhahn.github.io/ko/projects/ndir-multigas-sensing.html">
+</head>
+<body class="project-page archive-detail">
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html#home" aria-label="ROCOS 연구실 홈"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ROCOS<span class="brand-caption">ROBOTIC CONTROL SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴 <span aria-hidden="true">☰</span></button>
+      <nav id="site-nav" aria-label="주요 메뉴">
+        <a href="../index.html#home">홈</a><a href="../index.html#about">PI</a><a href="../index.html#research">연구</a><a href="../index.html#publications">연구성과</a><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#members">구성원</a><a href="../index.html#teaching">강의</a><a href="../index.html#contact">연락처</a>
+        <span class="language-switch" role="group" aria-label="언어 선택"><a href="../../projects/ndir-multigas-sensing.html" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a lang="ko" hreflang="ko" aria-current="true">KO</a></span>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="project-intro" aria-labelledby="project-title"><div class="container"><a class="return-link" href="../index.html#projects">← 프로젝트</a><div class="project-hero-grid"><div><p class="eyebrow">ROCOS / 연구 프로젝트</p><h1 id="project-title">저전력 NDIR 다종 가스 센싱 및 무선 모니터링</h1><p class="project-summary">다중 광경로 적외선 가스 검출, 패턴 인식, 무선 통신, 모바일 모니터링을 통합한 저전력 센싱 플랫폼을 다룹니다.</p><dl class="project-meta" data-project="ndir-multigas-sensing"><div><dt>기간</dt><dd>2014.12 – 2015.11</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한국산학연협회</dd></div></dl></div><figure class="concept-art"><svg viewBox="0 0 400 300" role="img" aria-labelledby="concept-art-title"><title id="concept-art-title">Low-Power NDIR Multi-Gas Sensing and Wireless Monitoring — conceptual schematic</title><defs><pattern id="art-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#385665" stroke-width=".7"/></pattern></defs><rect x="25" y="25" width="350" height="250" fill="url(#art-grid)"/><g fill="none" stroke-width="1.5"><path d="M90 80H308V231H90Z" stroke="#67818b"/><path d="m66 108 238 40-210 39 208 34" stroke="#a6d4c6" stroke-width="2"/><path d="M90 140v75M308 125v102" stroke="#d5e6e5" stroke-width="4"/><circle cx="63" cy="108" r="10" stroke="#d5e6e5"/><path d="M310 210H335V235H310Z" stroke="#d5e6e5"/><g stroke="#67818b"><circle cx="162" cy="120" r="5"/><circle cx="243" cy="188" r="7"/><circle cx="203" cy="170" r="4"/></g></g></svg><figcaption>ROCOS / 개념도</figcaption></figure></div></div></section>
+    <section class="project-section" aria-label="Research challenge and objective"><div class="container challenge-grid"><div><p class="eyebrow">I / 연구 과제</p><h2>연구 질문</h2><p class="section-description">다종 가스 센싱, 신호 해석, 무선 모니터링을 저전력 플랫폼에서 어떻게 함께 구현할 수 있을까?</p></div><div><p class="eyebrow">II / 연구 목표</p><h2>연구의 방향</h2><p class="section-description">다중 광경로 NDIR 가스 검출과 패턴 인식, 무선 통신, 모바일 모니터링을 통합합니다.</p></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="concept-title"><div class="container"><p class="eyebrow">III / 핵심 개념 및 시스템 구성</p><h2 id="concept-title">적외선 신호에서 가스 농도 추정까지</h2><div class="schematic"><ol class="flow" style="--stages: 6" aria-label="Core system pipeline"><li><strong>적외선 광원</strong></li><li><strong>다중 광경로 광학 챔버</strong></li><li><strong>광검출기</strong></li><li><strong>신호 조정</strong></li><li><strong>패턴 인식</strong></li><li><strong>가스 농도</strong></li></ol></div></div></section>
+    <section class="project-section" aria-labelledby="methodology-title"><div class="container"><p class="eyebrow">IV / 연구 방법</p><h2 id="methodology-title">개별 요소에서 통합 시스템으로</h2><div class="schematic"><div class="lane"><p class="diagram-caption">시스템 확장</p><ol class="flow" style="--stages: 4" aria-label="SYSTEM EXPANSION"><li><strong>가스 센서</strong></li><li><strong>ZIGBEE / BLUETOOTH</strong></li><li><strong>스마트폰 앱</strong></li><li><strong>서버 / 데이터베이스</strong></li></ol></div></div></div></section>
+    <section class="project-section" aria-labelledby="components-title"><div class="container"><p class="eyebrow">V / 핵심 기술 요소</p><h2 id="components-title">기술적 기반</h2><div class="components"><div class="component"><span class="component-index">A</span><h3>다중 광경로 광학 챔버</h3></div><div class="component"><span class="component-index">B</span><h3>NDIR 센싱</h3></div><div class="component"><span class="component-index">C</span><h3>PCA 기반 특징 추출</h3></div><div class="component"><span class="component-index">D</span><h3>신경망 학습</h3></div><div class="component"><span class="component-index">E</span><h3>무선 통신</h3></div><div class="component"><span class="component-index">F</span><h3>저전력 임베디드 플랫폼</h3></div><div class="component"><span class="component-index">G</span><h3>모바일 모니터링</h3></div></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="timeline-title"><div class="container"><p class="eyebrow">VI / 연구 일정</p><h2 id="timeline-title">연구 기간</h2><p class="timeline-note">2014.12 – 2015.11</p><ol class="timeline"><li><p class="time-label">2014.12</p><p>연구 시작</p></li><li><p class="time-label">2015.11</p><p>연구 종료</p></li></ol></div></section>
+    <section class="project-information" aria-labelledby="information-title"><div class="container information-grid"><div><h2 id="information-title">프로젝트 정보</h2><a class="return-link" href="archive.html">전체 프로젝트 보기 <span aria-hidden="true">→</span></a></div><dl class="project-meta" data-project="ndir-multigas-sensing"><div><dt>기간</dt><dd>2014.12 – 2015.11</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한국산학연협회</dd></div></dl></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="../index.html#home"><span class="brand-mark footer-brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="footer-brand-copy">ROCOS<span>ROBOTIC CONTROL SYSTEMS</span></span></a><p>© <span id="copyright-year">2026</span> 한봉수. All rights reserved.</p><div class="footer-institution"><img class="footer-wordmark" src="../../assets/hongik-university-wordmark.png" alt="Hongik University" width="1654" height="114"><a class="back-top" href="#main">맨 위로 ↑</a></div></div></footer>
+</body>
+</html>

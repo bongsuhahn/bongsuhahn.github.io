@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="../locale.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="다상유동 해석을 통해 내부 분리 위어의 설치각이 초기 자흡과 연속 운전 중 미세 기포 제거에 미치는 영향을 살펴봅니다.">
+  <meta name="theme-color" content="#173b4b">
+  <title>CFD를 이용한 자흡식 펌프의 공기–물 분리 설계 해석 | ROCOS</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../projects/project.css">
+  <link rel="stylesheet" href="../../projects/archive.css">
+  <link rel="stylesheet" href="../../language.css?v=54167babe631">
+  <script src="../../language.js?v=55e028ffc378" defer></script>
+  <script src="archive-data.js" defer></script>
+  <script src="../../projects/project.js" defer></script>
+  <link rel="stylesheet" href="../preview.css">
+  <link rel="alternate" hreflang="en" href="https://bongsuhahn.github.io/projects/self-priming-pump-cfd.html">
+  <link rel="alternate" hreflang="ko" href="https://bongsuhahn.github.io/ko/projects/self-priming-pump-cfd.html">
+  <link rel="alternate" hreflang="x-default" href="https://bongsuhahn.github.io/projects/self-priming-pump-cfd.html">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bongsuhahn.github.io/ko/projects/self-priming-pump-cfd.html">
+</head>
+<body class="project-page archive-detail">
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html#home" aria-label="ROCOS 연구실 홈"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ROCOS<span class="brand-caption">ROBOTIC CONTROL SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴 <span aria-hidden="true">☰</span></button>
+      <nav id="site-nav" aria-label="주요 메뉴">
+        <a href="../index.html#home">홈</a><a href="../index.html#about">PI</a><a href="../index.html#research">연구</a><a href="../index.html#publications">연구성과</a><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#members">구성원</a><a href="../index.html#teaching">강의</a><a href="../index.html#contact">연락처</a>
+        <span class="language-switch" role="group" aria-label="언어 선택"><a href="../../projects/self-priming-pump-cfd.html" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a lang="ko" hreflang="ko" aria-current="true">KO</a></span>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="project-intro" aria-labelledby="project-title"><div class="container"><a class="return-link" href="../index.html#projects">← 프로젝트</a><div class="project-hero-grid"><div><p class="eyebrow">ROCOS / 연구 프로젝트</p><h1 id="project-title">CFD를 이용한 자흡식 펌프의 공기–물 분리 설계 해석</h1><p class="project-summary">다상유동 해석을 통해 내부 분리 위어의 설치각이 초기 자흡과 연속 운전 중 미세 기포 제거에 미치는 영향을 살펴봅니다.</p><dl class="project-meta" data-project="self-priming-pump-cfd"><div><dt>기간</dt><dd>2025.05 – 2025.12</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한일전기 · 일석장학재단</dd></div></dl></div><figure class="concept-art"><svg viewBox="0 0 400 300" role="img" aria-labelledby="concept-art-title"><title id="concept-art-title">CFD-Based Design Analysis of Air–Water Separation in a Self-Priming Pump — conceptual schematic</title><defs><pattern id="art-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#385665" stroke-width=".7"/></pattern></defs><rect x="25" y="25" width="350" height="250" fill="url(#art-grid)"/><g fill="none" stroke-width="1.5"><path d="M50 90V220H350V90M50 150H350" stroke="#67818b"/><path d="M80 190Q120 140 162 165T315 145" stroke="#a6d4c6" stroke-dasharray="5 5"/><path d="m195 218 21-125" stroke="#d5e6e5" stroke-width="3"/><path d="M195 218V93" stroke="#67818b" stroke-dasharray="4 5"/><g stroke="#a6d4c6"><circle cx="245" cy="155" r="7"/><circle cx="260" cy="120" r="5"/><circle cx="276" cy="85" r="3"/><path d="M292 133V65m-6 8 6-8 6 8"/></g></g></svg><figcaption>ROCOS / 개념도</figcaption></figure></div></div></section>
+    <section class="project-section" aria-label="Research challenge and objective"><div class="container challenge-grid"><div><p class="eyebrow">I / 연구 과제</p><h2>연구 질문</h2><p class="section-description">분리 위어의 형상은 자흡 과정과 연속 운전 중 공기 제거 성능에 어떤 영향을 미칠까?</p></div><div><p class="eyebrow">II / 연구 목표</p><h2>연구의 방향</h2><p class="section-description">분리 위어의 설치각이 초기 자흡과 연속적인 미세 기포 제거에 미치는 영향을 분석합니다.</p></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="concept-title"><div class="container"><p class="eyebrow">III / 핵심 개념 및 시스템 구성</p><h2 id="concept-title">분리 성능을 결정하는 형상</h2><div class="schematic"><ol class="flow" style="--stages: 5" aria-label="Core system pipeline"><li><strong>자흡식 펌프</strong></li><li><strong>공기–물 혼합물</strong></li><li><strong>분리 위어</strong></li><li><strong>유동 재분배</strong></li><li><strong>공기 제거</strong></li></ol></div></div></section>
+    <section class="project-section" aria-labelledby="methodology-title"><div class="container"><p class="eyebrow">IV / 연구 방법</p><h2 id="methodology-title">다상유동을 살펴보는 두 가지 관점</h2><div class="schematic"><div class="lane"><p class="diagram-caption">초기 자흡</p><ol class="flow" style="--stages: 3" aria-label="INITIAL PRIMING"><li><strong>2차원 VOF</strong></li><li><strong>계면 거동</strong></li><li><strong>초기 공기 배출</strong></li></ol></div><div class="lane"><p class="diagram-caption">연속 운전</p><ol class="flow" style="--stages: 3" aria-label="CONTINUOUS OPERATION"><li><strong>3차원 분산상</strong></li><li><strong>기포 추적</strong></li><li><strong>분리 효율</strong></li></ol></div></div></div></section>
+    <section class="project-section" aria-labelledby="geometry-title"><div class="container"><p class="eyebrow">V / 형상 비교</p><h2 id="geometry-title">세 가지 분리 위어 설치각</h2><div class="geometry-comparison"><figure><svg viewBox="0 0 240 160" role="img" aria-label="Separation weir at 0 degrees, conceptual comparison"><path d="M25 30V135H215V30M25 90H215" fill="none" stroke="#a9b9b4"/><path d="M120 135V30" stroke="#a9b9b4" stroke-dasharray="3 4"/><path d="M120 135V30" transform="rotate(0 120 135)" stroke="#25645e" stroke-width="3"/></svg><figcaption>0°</figcaption></figure><figure><svg viewBox="0 0 240 160" role="img" aria-label="Separation weir at 9 degrees, conceptual comparison"><path d="M25 30V135H215V30M25 90H215" fill="none" stroke="#a9b9b4"/><path d="M120 135V30" stroke="#a9b9b4" stroke-dasharray="3 4"/><path d="M120 135V30" transform="rotate(9 120 135)" stroke="#25645e" stroke-width="3"/></svg><figcaption>9°</figcaption></figure><figure><svg viewBox="0 0 240 160" role="img" aria-label="Separation weir at 18 degrees, conceptual comparison"><path d="M25 30V135H215V30M25 90H215" fill="none" stroke="#a9b9b4"/><path d="M120 135V30" stroke="#a9b9b4" stroke-dasharray="3 4"/><path d="M120 135V30" transform="rotate(18 120 135)" stroke="#25645e" stroke-width="3"/></svg><figcaption>18°</figcaption></figure></div><p class="timeline-note">설치각 비교를 위한 개략도이며, 실제 축척과 다릅니다.</p></div></section>
+    <section class="project-section" aria-labelledby="components-title"><div class="container"><p class="eyebrow">VI / 핵심 기술 요소</p><h2 id="components-title">기술적 기반</h2><div class="components"><div class="component"><span class="component-index">A</span><h3>분리 위어 형상</h3></div><div class="component"><span class="component-index">B</span><h3>2차원 VOF</h3></div><div class="component"><span class="component-index">C</span><h3>3차원 분산상</h3></div><div class="component"><span class="component-index">D</span><h3>계면 거동</h3></div><div class="component"><span class="component-index">E</span><h3>기포 추적</h3></div><div class="component"><span class="component-index">F</span><h3>분리 효율</h3></div></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="timeline-title"><div class="container"><p class="eyebrow">VII / 연구 일정</p><h2 id="timeline-title">연구 기간</h2><p class="timeline-note">2025.05 – 2025.09</p><ol class="timeline"><li><p class="time-label">2025.05</p><p>연구 시작</p></li><li><p class="time-label">2025.09</p><p>연구 종료</p></li></ol></div></section>
+    <section class="project-information" aria-labelledby="information-title"><div class="container information-grid"><div><h2 id="information-title">프로젝트 정보</h2><a class="return-link" href="archive.html">전체 프로젝트 보기 <span aria-hidden="true">→</span></a></div><dl class="project-meta" data-project="self-priming-pump-cfd"><div><dt>기간</dt><dd>2025.05 – 2025.12</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한일전기 · 일석장학재단</dd></div></dl></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="../index.html#home"><span class="brand-mark footer-brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="footer-brand-copy">ROCOS<span>ROBOTIC CONTROL SYSTEMS</span></span></a><p>© <span id="copyright-year">2026</span> 한봉수. All rights reserved.</p><div class="footer-institution"><img class="footer-wordmark" src="../../assets/hongik-university-wordmark.png" alt="Hongik University" width="1654" height="114"><a class="back-top" href="#main">맨 위로 ↑</a></div></div></footer>
+</body>
+</html>

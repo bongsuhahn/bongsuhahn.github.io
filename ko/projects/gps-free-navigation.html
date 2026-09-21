@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="../locale.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="디지털 트윈 지도, 스테레오 영상, 상태 추정, 경로 재계획, 안전성을 고려한 제어를 통합하여 GPS 없이 자율주행하는 항법 체계를 다룹니다.">
+  <meta name="theme-color" content="#173b4b">
+  <title>GPS 비가용 환경의 자율주행을 위한 비전–CAD 융합 | ROCOS</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../projects/project.css">
+  <link rel="stylesheet" href="../../language.css?v=54167babe631">
+  <script src="../../language.js?v=55e028ffc378" defer></script>
+  <script src="archive-data.js" defer></script>
+  <script src="../../projects/project.js" defer></script>
+  <link rel="stylesheet" href="../preview.css">
+  <link rel="alternate" hreflang="en" href="https://bongsuhahn.github.io/projects/gps-free-navigation.html">
+  <link rel="alternate" hreflang="ko" href="https://bongsuhahn.github.io/ko/projects/gps-free-navigation.html">
+  <link rel="alternate" hreflang="x-default" href="https://bongsuhahn.github.io/projects/gps-free-navigation.html">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bongsuhahn.github.io/ko/projects/gps-free-navigation.html">
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html#home" aria-label="ROCOS 연구실 홈"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ROCOS<span class="brand-caption">ROBOTIC CONTROL SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴 <span aria-hidden="true">☰</span></button>
+      <nav id="site-nav" aria-label="주요 메뉴">
+        <a href="../index.html#home">홈</a><a href="../index.html#about">PI</a><a href="../index.html#research">연구</a><a href="../index.html#publications">연구성과</a><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#members">구성원</a><a href="../index.html#teaching">강의</a><a href="../index.html#contact">연락처</a>
+        <span class="language-switch" role="group" aria-label="언어 선택"><a href="../../projects/gps-free-navigation.html" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a lang="ko" hreflang="ko" aria-current="true">KO</a></span>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="project-intro" aria-labelledby="project-title"><div class="container">
+      <a class="return-link" href="../index.html#projects">← 프로젝트</a>
+      <div class="project-hero-grid"><div><p class="eyebrow">프로젝트 02 / 항법 및 자율성</p><h1 id="project-title">GPS 비가용 환경의 자율주행을 위한 비전–CAD 융합</h1><p class="project-summary">디지털 트윈 지도, 스테레오 영상, 상태 추정, 경로 재계획, 안전성을 고려한 제어를 통합하여 GPS 없이 자율주행하는 항법 체계를 다룹니다.</p><dl class="project-meta" data-project="gps-free-navigation"><div><dt>기간</dt><dd>2026.04 – 2028.03</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>중소벤처기업부(MSS) / 중소기업기술정보진흥원(TIPA)</dd></div></dl></div><figure class="concept-art"><svg viewBox="0 0 400 310" role="img" aria-labelledby="concept-art-title"><title id="concept-art-title">CAD REFERENCE + LOCAL VISION — conceptual research schematic</title><defs><pattern id="art-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#385665" stroke-width=".7"/></pattern></defs><rect x="25" y="20" width="350" height="240" fill="url(#art-grid)"/><g fill="none" stroke="#67818b"><path d="m66 165 130-75 143 76-133 78Z"/><path d="m66 135 130-75 143 76-133 78Z"/><path d="m66 105 130-75 143 76-133 78Z"/><path d="M66 105v60M196 30v60M339 106v60M206 184v60"/></g><path d="m110 119 43-25 49 26 39-22 48 25-53 31-32-17-35 20" fill="none" stroke="#d5e6e5" stroke-width="2"/><path d="M108 172Q163 131 195 154T270 162" fill="none" stroke="#a6d4c6" stroke-width="2" stroke-dasharray="4 5"/><circle cx="195" cy="154" r="14" fill="#173b4b" stroke="#a6d4c6"/><path d="M195 132v13m0 18v13m-22-22h13m18 0h13" stroke="#a6d4c6"/><text x="200" y="285" text-anchor="middle" fill="#b0d2c8" font-size="10" letter-spacing="1">CAD REFERENCE + LOCAL VISION</text></svg><figcaption>ROCOS / 개념도</figcaption></figure></div>
+    </div></section>
+    <section class="project-section" aria-labelledby="challenge-title"><div class="container challenge-grid"><div><p class="eyebrow">I / 연구 과제</p><h2 id="challenge-title">GPS 없이 공유하는 위치 기준</h2><p class="section-description">로봇의 지역 관측을 디지털 환경 모델에 정합하고, 누적 오차를 보정하면서 GPS 없이 안전하게 주행할 수 있을까?</p><h3 style="margin-top: 28px">연구 목표</h3><p class="section-description">디지털 트윈 지도와 스테레오 영상, 상태 추정, 경로 재계획, 안전 제어를 결합해 GPS 비가용 환경의 자율주행을 구현하고자 합니다.</p></div><ul class="challenge-points"><li><span>A</span><div><strong>전역적 일관성</strong></div></li><li><span>B</span><div><strong>누적 위치 오차</strong></div></li><li><span>C</span><div><strong>동적 장애물</strong></div></li></ul></div></section>
+    <section class="project-section section-tinted" aria-labelledby="concept-title"><div class="container"><p class="eyebrow">II / 핵심 연구 개념</p><h2 id="concept-title">설계 형상에서 안전한 움직임으로</h2><p class="section-description">연구 방법의 흐름</p><div class="schematic"><div class="source-lanes"><div><p class="diagram-caption">기준 환경</p><ol class="flow" style="--stages: 3" aria-label="Methodology sequence"><li><strong>2차원 CAD</strong></li><li><strong>3차원 디지털 트윈</strong></li><li><strong>전역 지도</strong></li></ol></div><div><p class="diagram-caption">관측 환경</p><ol class="flow" style="--stages: 2" aria-label="Methodology sequence"><li><strong>스테레오 영상</strong></li><li><strong>지역 3차원 지도</strong></li></ol></div></div><div class="merge-arrow" aria-hidden="true">↓</div><p class="diagram-caption">전역 지도 + 지역 3차원 지도</p><ol class="flow" style="--stages: 2" aria-label="Methodology sequence"><li><strong>비전–CAD 정합</strong></li><li><strong>전역 위치·자세</strong></li></ol><div class="merge-arrow" aria-hidden="true">↓</div><p class="diagram-caption">전역 위치·자세 + 오도메트리 + IMU</p><ol class="flow" style="--stages: 4" aria-label="Methodology sequence"><li><strong>EKF / UKF 상태 추정</strong></li><li><strong>동적 비용 지도</strong></li><li><strong>지역 경로 재계획</strong></li><li><strong>안전한 로봇 운동</strong></li></ol><p class="feedback-note"><span aria-hidden="true">↺</span>새로운 관측 정보를 상태 보정, 재위치 추정, 안전한 경로 재계획에 반영합니다.</p></div></div></section>
+    <section class="project-section" aria-labelledby="components-title"><div class="container"><p class="eyebrow">III / 핵심 연구 요소</p><h2 id="components-title">서로 연계된 네 단계의 항법 과정</h2><div class="components four"><div class="component"><span class="component-index">A / 인지</span><h3>인지</h3><ul><li>스테레오 영상</li><li>3차원 복원</li></ul></div><div class="component"><span class="component-index">B / 위치 추정</span><h3>위치 추정</h3><ul><li>비전–CAD 정합</li><li>전역 위치·자세 보정</li></ul></div><div class="component"><span class="component-index">C / 예측 및 계획</span><h3>예측 및 계획</h3><ul><li>동적 물체 거동 예측</li><li>다층 비용 지도</li></ul></div><div class="component"><span class="component-index">D / 안전 제어</span><h3>안전 제어</h3><ul><li>DWA / TEB</li><li>고장 시 안전 동작</li></ul></div></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="timeline-title"><div class="container"><p class="eyebrow">IV / 개발 일정</p><h2 id="timeline-title">기반 구축, 통합, 검증</h2><ol class="timeline"><li><p class="time-label">2026</p><h3>기반 구축</h3><p>스테레오 영상 복원<br>비전–CAD 정합 최소 기능 구현</p></li><li><p class="time-label">2027</p><h3>통합</h3><p>상태 정보 융합<br>재위치 추정<br>상황 변화에 따른 경로 재계획</p></li><li><p class="time-label">2028</p><h3>검증</h3><p>통합 항법<br>현장 검증</p></li></ol></div></section>
+    <section class="project-information" aria-labelledby="information-title"><div class="container information-grid"><div><h3 id="information-title">프로젝트 정보</h3><a class="return-link" href="archive.html">전체 프로젝트 보기 <span aria-hidden="true">→</span></a></div><dl class="project-meta" data-project="gps-free-navigation"><div><dt>기간</dt><dd>2026.04 – 2028.03</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>중소벤처기업부(MSS) / 중소기업기술정보진흥원(TIPA)</dd></div></dl></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="../index.html#home"><span class="brand-mark footer-brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="footer-brand-copy">ROCOS<span>ROBOTIC CONTROL SYSTEMS</span></span></a><p>© <span id="copyright-year">2026</span> 한봉수. All rights reserved.</p><div class="footer-institution"><img class="footer-wordmark" src="../../assets/hongik-university-wordmark.png" alt="Hongik University" width="1654" height="114"><a class="back-top" href="#main">맨 위로 ↑</a></div></div></footer>
+</body>
+</html>

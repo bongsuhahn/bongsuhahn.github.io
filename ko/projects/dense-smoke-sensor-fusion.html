@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="../locale.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="일반 카메라의 관측 신뢰성이 낮아지는 화재·연기 환경에서 여러 센서의 정보를 활용해 물체를 검출하고 위치를 추정하는 인지 체계를 다룹니다.">
+  <meta name="theme-color" content="#173b4b">
+  <title>고밀도 연기 환경의 물체 검출을 위한 센서 융합 | ROCOS</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../projects/project.css">
+  <link rel="stylesheet" href="../../projects/archive.css">
+  <link rel="stylesheet" href="../../language.css?v=54167babe631">
+  <script src="../../language.js?v=55e028ffc378" defer></script>
+  <script src="archive-data.js" defer></script>
+  <script src="../../projects/project.js" defer></script>
+  <link rel="stylesheet" href="../preview.css">
+  <link rel="alternate" hreflang="en" href="https://bongsuhahn.github.io/projects/dense-smoke-sensor-fusion.html">
+  <link rel="alternate" hreflang="ko" href="https://bongsuhahn.github.io/ko/projects/dense-smoke-sensor-fusion.html">
+  <link rel="alternate" hreflang="x-default" href="https://bongsuhahn.github.io/projects/dense-smoke-sensor-fusion.html">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bongsuhahn.github.io/ko/projects/dense-smoke-sensor-fusion.html">
+</head>
+<body class="project-page archive-detail">
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html#home" aria-label="ROCOS 연구실 홈"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ROCOS<span class="brand-caption">ROBOTIC CONTROL SYSTEMS</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴 <span aria-hidden="true">☰</span></button>
+      <nav id="site-nav" aria-label="주요 메뉴">
+        <a href="../index.html#home">홈</a><a href="../index.html#about">PI</a><a href="../index.html#research">연구</a><a href="../index.html#publications">연구성과</a><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#members">구성원</a><a href="../index.html#teaching">강의</a><a href="../index.html#contact">연락처</a>
+        <span class="language-switch" role="group" aria-label="언어 선택"><a href="../../projects/dense-smoke-sensor-fusion.html" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a lang="ko" hreflang="ko" aria-current="true">KO</a></span>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="project-intro" aria-labelledby="project-title"><div class="container"><a class="return-link" href="../index.html#projects">← 프로젝트</a><div class="project-hero-grid"><div><p class="eyebrow">ROCOS / 연구 프로젝트</p><h1 id="project-title">고밀도 연기 환경의 물체 검출을 위한 센서 융합</h1><p class="project-summary">일반 카메라의 관측 신뢰성이 낮아지는 화재·연기 환경에서 여러 센서의 정보를 활용해 물체를 검출하고 위치를 추정하는 인지 체계를 다룹니다.</p><dl class="project-meta" data-project="dense-smoke-sensor-fusion"><div><dt>기간</dt><dd>2021.06 – 2024.02</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한국연구재단(NRF)</dd></div></dl></div><figure class="concept-art"><svg viewBox="0 0 400 300" role="img" aria-labelledby="concept-art-title"><title id="concept-art-title">Sensor Fusion for Object Detection in Dense Smoke Environments — conceptual schematic</title><defs><pattern id="art-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#385665" stroke-width=".7"/></pattern></defs><rect x="25" y="25" width="350" height="250" fill="url(#art-grid)"/><g fill="none" stroke-width="1.5"><g stroke="#67818b"><path d="M70 65H140V105H70ZM70 135H140V175H70ZM70 205H140V245H70Z"/><path d="m140 85 60 70m-60 0h60m-60 70 60-70"/></g><circle cx="220" cy="155" r="20" stroke="#a6d4c6"/><path d="M240 155H300m-8-6 8 6-8 6" stroke="#a6d4c6"/><path d="m300 115 35-20 35 20v70l-35 20-35-20Zm0 0 35 20 35-20m-35 20v70" stroke="#d5e6e5"/><g fill="#b0d2c8" stroke="none"><circle cx="105" cy="85" r="6"/><path d="M88 155q17-27 34 0q-17 27-34 0"/><path d="M85 225q20-25 40 0M93 225q12-15 24 0" fill="none" stroke="#b0d2c8"/></g></g></svg><figcaption>ROCOS / 개념도</figcaption></figure></div></div></section>
+    <section class="project-section" aria-label="Research challenge and objective"><div class="container challenge-grid"><div><p class="eyebrow">I / 연구 과제</p><h2>연구 질문</h2><p class="section-description">짙은 연기로 영상 정보가 불확실해질 때 물체를 어떻게 검출하고 위치를 파악할 수 있을까?</p></div><div><p class="eyebrow">II / 연구 목표</p><h2>연구의 방향</h2><p class="section-description">열영상, 레이더, 초음파 센싱을 결합하여 고온·저시정 환경에서 물체의 3차원 위치와 형상을 파악하고자 합니다.</p></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="concept-title"><div class="container"><p class="eyebrow">III / 핵심 개념 및 시스템 구성</p><h2 id="concept-title">상호 보완적인 센싱과 공통의 공간 정보</h2><div class="schematic"><ul class="parallel-sources"><li>열화상 카메라</li><li>레이더</li><li>초음파 배열</li></ul><div class="merge-arrow" aria-hidden="true">↓</div><ol class="flow" style="--stages: 3" aria-label="Core system pipeline"><li><strong>센서 융합</strong></li><li><strong>물체 위치 추정</strong></li><li><strong>3차원 환경</strong></li></ol></div></div></section>
+    <section class="project-section" aria-labelledby="methodology-title"><div class="container"><p class="eyebrow">IV / 연구 방법</p><h2 id="methodology-title">개별 요소에서 통합 시스템으로</h2><div class="schematic"><div class="lane"><p class="diagram-caption">정합 및 추정</p><ol class="flow" style="--stages: 4" aria-label="ALIGNMENT &amp; ESTIMATION"><li><strong>센서 정합</strong></li><li><strong>호모그래피 / 좌표 변환</strong></li><li><strong>칼만 필터 기반 추정</strong></li><li><strong>다중 물체의 3차원 표현</strong></li></ol></div></div></div></section>
+    <section class="project-section" aria-labelledby="components-title"><div class="container"><p class="eyebrow">V / 핵심 기술 요소</p><h2 id="components-title">기술적 기반</h2><div class="components"><div class="component"><span class="component-index">A</span><h3>열영상</h3><p class="section-description">물체의 외형 정보</p></div><div class="component"><span class="component-index">B</span><h3>레이더</h3><p class="section-description">원거리 검출</p></div><div class="component"><span class="component-index">C</span><h3>3차원 초음파 센싱</h3><p class="section-description">근거리 형상 정보</p></div></div></div></section>
+    <section class="project-section section-tinted" aria-labelledby="timeline-title"><div class="container"><p class="eyebrow">VI / 연구 일정</p><h2 id="timeline-title">연구 진행 단계</h2><p class="timeline-note">2021.06 – 2024.02 · 연구 단계</p><ol class="timeline"><li><p class="time-label">R1</p><p>3차원 초음파 센싱</p></li><li><p class="time-label">R2</p><p>다중 모달 데이터 융합</p></li><li><p class="time-label">R3</p><p>고밀도 연기 환경 검증</p></li></ol></div></section>
+    <section class="project-information" aria-labelledby="information-title"><div class="container information-grid"><div><h2 id="information-title">프로젝트 정보</h2><a class="return-link" href="archive.html">전체 프로젝트 보기 <span aria-hidden="true">→</span></a></div><dl class="project-meta" data-project="dense-smoke-sensor-fusion"><div><dt>기간</dt><dd>2021.06 – 2024.02</dd></div><div><dt>역할</dt><dd>연구책임자</dd></div><div><dt>지원기관</dt><dd>한국연구재단(NRF)</dd></div></dl></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="../index.html#home"><span class="brand-mark footer-brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="footer-brand-copy">ROCOS<span>ROBOTIC CONTROL SYSTEMS</span></span></a><p>© <span id="copyright-year">2026</span> 한봉수. All rights reserved.</p><div class="footer-institution"><img class="footer-wordmark" src="../../assets/hongik-university-wordmark.png" alt="Hongik University" width="1654" height="114"><a class="back-top" href="#main">맨 위로 ↑</a></div></div></footer>
+</body>
+</html>
