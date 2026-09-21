@@ -65,22 +65,25 @@ const ROCOS_RESEARCH_RELATIONS = {
     "publications": {
       "featured": [
         "Sensorless Human-Intent-Based Power-Assist Control for Indoor Cooperative Transport via Interaction Estimation and Compliant Motion Generation",
-        "HybridDWAVO: Finite-Horizon Velocity-Obstacle Filtering within the Dynamic Window Approach for Dynamic Obstacle Avoidance",
-        "Enhancing Obstacle Avoidance in Dynamic Window Approach via Dynamic Obstacle Behavior Prediction",
-        "The Design of a Low-Cost Sensing and Control Architecture for a Search and Rescue Assistant Robot",
-        "Research and Conceptual Design of Sensor Fusion for Object Detection in Dense Smoke Environments"
-      ],
-      "additional": [
         "A Sensorless Control Framework for Human Intention Based Power Assist Robots",
-        "A User Following Control System for Displays",
+        "The Design of a Low-Cost Sensing and Control Architecture for a Search and Rescue Assistant Robot",
         "Design of an In-Pipe Mobile Robot with Screw Drive Mechanism Using Control Moment Gyroscopes",
         "Performance and Power/Energy Consumption in Microrobotic Servo Systems: Iterative Adaptive On-Off Controllers vs. LQG/PWM Controllers"
+      ],
+      "additional": [
+        "HybridDWAVO: Finite-Horizon Velocity-Obstacle Filtering within the Dynamic Window Approach for Dynamic Obstacle Avoidance",
+        "Enhancing Obstacle Avoidance in Dynamic Window Approach via Dynamic Obstacle Behavior Prediction",
+        "Research and Conceptual Design of Sensor Fusion for Object Detection in Dense Smoke Environments",
+        "A User Following Control System for Displays"
       ]
     },
     "directions": [
-      "Uncertainty-Calibrated Risk-Aware Predictive Dynamic Window Approach for Dynamic Obstacle Avoidance",
-      "Data-Driven Local Obstacle Avoidance for Mobile Robots via Supervised Learning and Reinforcement Learning",
-      "Learning-Assisted Localization Correction for Resource-Constrained Visual SLAM with Sparse Map Representations"
+      "Motion-State Estimation from Onboard Sensing",
+      "Robot Motion and Dynamic Modeling",
+      "Data-Driven Robot Dynamics Modeling",
+      "Sensorless Disturbance Estimation",
+      "Slip-Aware Mobility",
+      "Human–Robot Cooperative Control"
     ]
   },
   "autonomous-navigation": {
