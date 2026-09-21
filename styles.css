@@ -535,3 +535,6 @@ body.project-page .eyebrow {
   #teaching .teaching-semester h4,
   #contact .contact-details dt { font-size: 13px; }
 }
+
+/* Secondary Korean-name association on the English PI identity only. */
+html[lang="en"] .pi-profile-name .pi-korean-name { display: block; margin-top: 6px; font-family: var(--sans); font-size: 14px; font-weight: 400; line-height: 1.5; letter-spacing: 0; color: var(--muted); }
