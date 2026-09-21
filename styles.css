@@ -301,23 +301,20 @@
   .project-page .eyebrow { font-size: 10.6px; letter-spacing: 1.3px; line-height: 14.4px; }
 }
 
-/* Current members: compact name plates and research-interest panels. */
+/* Current members: single-column academic roster. */
 #members .current-member-group + .current-member-group { margin-top: 32px; }
-#members .current-member-group .group-heading { margin-bottom: 20px; padding-bottom: 0; border-bottom: 0; }
-#members .current-member-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-#members .member-card { display: flex; flex-direction: column; background: white; }
-#members .member-plate { padding: 20px 23px; background: #edf0eb; border-bottom: 1px solid var(--line); }
-#members .member-plate h4 { font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; }
-#members .member-plate .member-position { color: var(--accent); font-size: 15px; font-weight: 500; line-height: 1.6; margin-top: 6px; }
-#members .member-details { padding: 18px 23px; flex: 1; }
-#members .member-details p { margin: 0; }
-html[lang="ko"] #members .member-card { word-break: keep-all; overflow-wrap: break-word; }
+#members .current-member-group .group-heading { margin-bottom: 8px; padding-bottom: 0; border-bottom: 0; }
+#members .member-roster { display: block; }
+#members .member-entry { padding: 28px 0; text-align: left; }
+#members .member-entry + .member-entry { border-top: 1px solid var(--line); }
+#members .current-member-group:not(:has(+ .current-member-group)) .member-entry:last-child { padding-bottom: 0; }
+#members .current-member-group:has(+ .current-member-group) .member-roster { border-bottom: 1px solid var(--line); }
+#members .member-entry h4 { font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; }
+#members .member-entry .member-position { color: var(--accent); font-size: 15px; font-weight: 500; line-height: 1.6; margin-top: 8px; }
+#members .member-research { font-size: 16px; font-weight: 400; line-height: 1.65; color: var(--muted); margin-top: 12px; }
+html[lang="ko"] #members .member-entry { word-break: keep-all; overflow-wrap: break-word; }
 #members .members-alumni-link { display: inline-flex; align-items: center; gap: 15px; margin-top: 35px; padding: 6px 0; border-bottom: 1px solid #a9b9b4; color: var(--accent); font-size: 11px; letter-spacing: 1.3px; }
 #members .members-alumni-link:hover { text-decoration: underline; text-underline-offset: 4px; }
-
-@media (max-width: 600px) {
-  #members .current-member-grid { grid-template-columns: minmax(0, 1fr); }
-}
 
 /* Teaching: a compact, semester-grouped editorial course list. */
 #teaching .teaching-semester { margin-top: 26px; }
