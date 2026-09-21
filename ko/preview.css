@@ -64,4 +64,4 @@ html[lang="ko"] body h1, html[lang="ko"] body h2 { font-weight: 700; letter-spac
 html[lang="ko"] .hero h1.lab-title { letter-spacing: .015em; }
 
 /* PI display name follows the Korean display-heading weight and tracking. */
-html[lang="ko"] .pi-profile .pi-profile-name { font-weight: 700; letter-spacing: .015em; }
+html[lang="ko"] .pi-profile .pi-profile-name { font-weight: 700; letter-spacing: .03em; }
