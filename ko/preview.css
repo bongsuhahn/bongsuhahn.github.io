@@ -1,7 +1,9 @@
+/* Self-hosted Korean display face; sizes and responsive rules stay unchanged. */
+@font-face { font-family: "Nanum Myeongjo"; font-style: normal; font-weight: 400; font-display: swap; src: local("Nanum Myeongjo"), url("fonts/NanumMyeongjo-Regular.ttf") format("truetype"); }
 /* Local Korean typography only. The approved English styles are not edited. */
 html[lang="ko"] {
   --sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --serif: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif;
+  --serif: "Nanum Myeongjo", "Noto Serif KR", "Batang", serif;
 }
 html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
 html[lang="ko"] h1, html[lang="ko"] h2 { line-height: 1.35; letter-spacing: -.035em; text-wrap: balance; }
