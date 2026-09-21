@@ -57,3 +57,7 @@ html[lang="ko"] .research-directions, html[lang="ko"] .teaching-courses {
   html[lang="ko"] #home .lab-title-line { white-space: normal; }
   html[lang="ko"] .project-page .project-meta { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Nanum Myeongjo offers 400/700/800; use the next real weight for display headings only. */
+@font-face { font-family: "Nanum Myeongjo"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/NanumMyeongjo-Bold.ttf") format("truetype"); }
+html[lang="ko"] body h1, html[lang="ko"] body h2 { font-weight: 700; }
