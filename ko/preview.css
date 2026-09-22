@@ -65,3 +65,17 @@ html[lang="ko"] .hero h1.lab-title { letter-spacing: .015em; }
 
 /* PI display name follows the Korean display-heading weight and tracking. */
 html[lang="ko"] .pi-profile .pi-profile-name { font-weight: 700; letter-spacing: .03em; }
+
+/* Korean hierarchy labels: preserve chapter prominence at every viewport. */
+html[lang="ko"] :is(#about, #research, #publications, #projects, #members, #teaching, #contact) .eyebrow { font-size: 16px; font-weight: 600; letter-spacing: .1em; line-height: 1.4; }
+html[lang="ko"] #home .eyebrow,
+html[lang="ko"] body.project-page .eyebrow,
+html[lang="ko"] #research .card-top > span,
+html[lang="ko"] #projects .project-banner,
+html[lang="ko"] #projects .project-banner > span { font-size: 14px; font-weight: 600; }
+/* Share the existing language-neutral active-state rules and Latin numerals. */
+html[lang="ko"] .language-switch { font-family: Arial, Helvetica, sans-serif; }
+html[lang="ko"] .publications-section .publication-year-group > .publication-year { font-family: Georgia, "Times New Roman", serif; }
+@media (max-width: 600px) {
+  html[lang="ko"] :is(#about, #research, #publications, #projects, #members, #teaching, #contact) .eyebrow { font-size: 15.5px; }
+}
