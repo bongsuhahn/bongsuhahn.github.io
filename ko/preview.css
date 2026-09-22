@@ -1,9 +1,9 @@
+@font-face { font-family: "Noto Serif KR"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/NotoSerifKR-SemiBold.woff2") format("woff2"); }
 /* Self-hosted Korean display face; sizes and responsive rules stay unchanged. */
-@font-face { font-family: "Nanum Myeongjo"; font-style: normal; font-weight: 400; font-display: swap; src: local("Nanum Myeongjo"), url("fonts/NanumMyeongjo-Regular.ttf") format("truetype"); }
 /* Local Korean typography only. The approved English styles are not edited. */
 html[lang="ko"] {
   --sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --serif: "Nanum Myeongjo", "Noto Serif KR", "Batang", serif;
+  --serif: "Noto Serif KR", "Batang", serif;
 }
 html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
 html[lang="ko"] h1, html[lang="ko"] h2 { line-height: 1.35; letter-spacing: -.035em; text-wrap: balance; }
@@ -58,13 +58,11 @@ html[lang="ko"] .research-directions, html[lang="ko"] .teaching-courses {
   html[lang="ko"] .project-page .project-meta { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* Nanum Myeongjo offers 400/700/800; use the next real weight for display headings only. */
-@font-face { font-family: "Nanum Myeongjo"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/NanumMyeongjo-Bold.ttf") format("truetype"); }
-html[lang="ko"] body h1, html[lang="ko"] body h2 { font-weight: 700; letter-spacing: .015em; }
+html[lang="ko"] body h1, html[lang="ko"] body h2 { font-weight: 600; letter-spacing: .015em; }
 html[lang="ko"] .hero h1.lab-title { letter-spacing: .015em; }
 
 /* PI display name follows the Korean display-heading weight and tracking. */
-html[lang="ko"] .pi-profile .pi-profile-name { font-weight: 700; letter-spacing: .03em; }
+html[lang="ko"] .pi-profile .pi-profile-name { font-weight: 600; letter-spacing: .03em; }
 
 /* Korean hierarchy labels: preserve chapter prominence at every viewport. */
 html[lang="ko"] :is(#about, #research, #publications, #projects, #members, #teaching, #contact) .eyebrow { font-size: 16px; font-weight: 600; letter-spacing: .1em; line-height: 1.4; }
@@ -87,7 +85,10 @@ html[lang="ko"] #publications .publication-group > h3 { font-size: 15.5px; font-
 }
 
 /* Korean archive titles: retain the existing scale with restrained emphasis. */
-html[lang="ko"] body.archive-page .archive-project-title { font-weight: 500; letter-spacing: .015em; }
+html[lang="ko"] body.archive-page .archive-project-title { font-weight: 600; letter-spacing: .015em; }
 
 /* Restrained emphasis for Korean research overview card titles only. */
-html[lang="ko"] #research .research-card > h3 { font-weight: 500; letter-spacing: .015em; }
+html[lang="ko"] #research .research-card > h3 { font-weight: 600; letter-spacing: .015em; }
+
+/* Remaining Korean editorial serif titles share the real semibold weight. */
+html[lang="ko"] :is(.project-body h3, .pi-details h3, .member-details h4, #members .member-entry h4, .research-page .research-goal, .research-page .research-principle p, .research-page .research-related h3, .project-page .architecture h3, .project-page .timeline .time-label, .archive-detail .geometry-comparison figcaption) { font-weight: 600; }
