@@ -1,6 +1,6 @@
 /* Archive and new detail-page refinements, scoped to preserve existing pages. */
-.archive-page .archive-intro { padding-bottom: 55px; }
-.archive-page .archive-intro .eyebrow { margin-top: 40px; }
+.archive-page .archive-intro { padding-bottom: 12px; }
+.archive-page .archive-intro .eyebrow { margin-top: 40px; margin-bottom: 0; }
 .archive-page .archive-intro h1 { max-width: 750px; }
 .archive-page .archive-intro .project-summary { max-width: 700px; }
 .archive-list-section { padding: 18px 0 75px; }
