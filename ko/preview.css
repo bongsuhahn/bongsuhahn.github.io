@@ -85,3 +85,6 @@ html[lang="ko"] #publications .publication-group > h3 { font-size: 15.5px; font-
 @media (max-width: 600px) {
   html[lang="ko"] #publications .publication-group > h3 { font-size: 15px; }
 }
+
+/* Korean archive titles: retain the existing scale with restrained emphasis. */
+html[lang="ko"] body.archive-page .archive-project-title { font-weight: 500; letter-spacing: .015em; }
