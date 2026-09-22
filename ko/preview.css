@@ -88,3 +88,6 @@ html[lang="ko"] #publications .publication-group > h3 { font-size: 15.5px; font-
 
 /* Korean archive titles: retain the existing scale with restrained emphasis. */
 html[lang="ko"] body.archive-page .archive-project-title { font-weight: 500; letter-spacing: .015em; }
+
+/* Restrained emphasis for Korean research overview card titles only. */
+html[lang="ko"] #research .research-card > h3 { font-weight: 500; letter-spacing: .015em; }
