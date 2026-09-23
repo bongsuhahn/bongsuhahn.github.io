@@ -53,7 +53,7 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('main > section[id]').forEach(section => observer.observe(section));
 }
 
-document.querySelector('#copyright-year').textContent = new Date().getFullYear();
+
 
 // Featured cards use the same metadata records as the archive and detail pages.
 // Matching static values remain available without JavaScript.

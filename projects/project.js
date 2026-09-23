@@ -19,7 +19,7 @@ document.addEventListener('keydown', event => {
   }
 });
 window.matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
-document.querySelector('#copyright-year').textContent = new Date().getFullYear();
+
 
 // Keep detail metadata synchronized with the archive's shared project records.
 // Static HTML retains the same information when JavaScript is unavailable.
