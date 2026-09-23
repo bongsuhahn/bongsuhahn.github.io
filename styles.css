@@ -386,8 +386,8 @@ html[lang="ko"] #members .member-entry { word-break: keep-all; overflow-wrap: br
   .site-footer .footer-brand .footer-brand-copy { text-align: center; }
   .site-footer .footer-brand .footer-brand-copy > span::after { content: " LABORATORY"; }
   .site-footer .footer-institution { display: contents; }
-  .site-footer .footer-wordmark { grid-row: 3; width: min(60vw,230px); margin-top: 26px; }
-  .site-footer .footer-inner > .back-top { grid-row: 2; padding-top: 0; margin: 26px 0 0; justify-self: center; }
+  .site-footer .footer-wordmark { grid-row: 2; width: min(60vw,230px); margin-top: 26px; }
+  .site-footer .footer-inner > .back-top { grid-row: 3; padding-top: 0; margin: 26px 0 0; justify-self: center; }
 }
 
 /* Readability refinement: body copy and secondary labels, not display headings. */
