@@ -140,6 +140,7 @@ const ROCOS_RESEARCH_RELATIONS = {
     "projectLimit": 4,
     "publications": {
       "featured": [
+        "Steady-state parameter-space analysis for interpretable fault diagnosis of centrifugal pumps",
         "A Two-Stage Probabilistic Framework with Validity Screening and Physics-Informed Trend Modeling for Lithium-Ion Battery Health Estimation from Short Discharge Transients",
         "Explainable Integration of Process and Optical Parameters for Plasma Etch Depth Prediction",
         "Position Estimator Design for a MEMS Top-Drive Electrostatic Rotary Actuator",
@@ -154,7 +155,6 @@ const ROCOS_RESEARCH_RELATIONS = {
     "directions": [
       "Observability-Informed Adaptive Deep Koopman Modeling for Battery Monitoring",
       "Observability-Informed Low-Order Nonlinear State-Space Modeling and Estimation for Plasma Etching",
-      "Steady-State Parameter-Space Analysis for Interpretable Fault Diagnosis of Centrifugal Pumps",
       "Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte",
       "Adaptive Endpoint Detection Modeling under Limited and Imbalanced Plasma Etching Data",
       "OES-Supported State-Constrained Recipe Optimization for Mean Thickness and Uniformity Control in Plasma Etching"
