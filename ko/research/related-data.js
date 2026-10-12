@@ -28,7 +28,6 @@ const ROCOS_RESEARCH_RELATIONS = {
         "On-Off Iterative Adaptive Controller for Low-Power Micro-Robotic Step Regulation"
       ],
       "additional": [
-        "A Sensorless Control Framework for Human Intention Based Power Assist Robots",
         "A Digital Current Control Using Single DC-Link Current Sensing of BLDC Actuation Systems",
         "Performance and Power/Energy Consumption in Microrobotic Servo Systems: Iterative Adaptive On-Off Controllers vs. LQG/PWM Controllers",
         "Active Prevention Strategy for Rollover of Cargo Crane Trucks Using a Control Moment Gyro",
@@ -63,7 +62,6 @@ const ROCOS_RESEARCH_RELATIONS = {
     "publications": {
       "featured": [
         "Sensorless Human-Intent-Based Power-Assist Control for Indoor Cooperative Transport via Interaction Estimation and Compliant Motion Generation",
-        "A Sensorless Control Framework for Human Intention Based Power Assist Robots",
         "The Design of a Low-Cost Sensing and Control Architecture for a Search and Rescue Assistant Robot",
         "Design of an In-Pipe Mobile Robot with Screw Drive Mechanism Using Control Moment Gyroscopes",
         "Performance and Power/Energy Consumption in Microrobotic Servo Systems: Iterative Adaptive On-Off Controllers vs. LQG/PWM Controllers"
