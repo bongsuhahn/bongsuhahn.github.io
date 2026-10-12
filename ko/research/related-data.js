@@ -31,7 +31,6 @@ const ROCOS_RESEARCH_RELATIONS = {
         "A Digital Current Control Using Single DC-Link Current Sensing of BLDC Actuation Systems",
         "Performance and Power/Energy Consumption in Microrobotic Servo Systems: Iterative Adaptive On-Off Controllers vs. LQG/PWM Controllers",
         "Active Prevention Strategy for Rollover of Cargo Crane Trucks Using a Control Moment Gyro",
-        "A Controller for Minimizing Roll Moment in an Attitude Control System with Thrusters Using Asymmetric Nozzle Throats",
         "Modeling and Optimal Low-Power On-Off Control of Thin-Film Piezoelectric Rotational Actuators"
       ]
     },
@@ -146,7 +145,6 @@ const ROCOS_RESEARCH_RELATIONS = {
         "Sensing Strategies to Reduce Power Consumption of Recursive-Least-Squares Parameter Identification of Autonomous Microsystems"
       ],
       "additional": [
-        "Angle Estimator Design for Electrostatic Rotary Actuator",
         "A Digital Current Control Using Single DC-Link Current Sensing of BLDC Actuation Systems"
       ]
     },
