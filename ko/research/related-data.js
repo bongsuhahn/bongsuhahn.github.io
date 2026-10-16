@@ -76,12 +76,12 @@ const ROCOS_RESEARCH_RELATIONS = {
       ]
     },
     "directions": [
-      "탑재 센서 기반 운동 상태 추정",
-      "이동 로봇 운동 및 동역학 모델링",
-      "데이터 기반 로봇 동역학 모델링",
-      "센서리스 외란 추정",
-      "슬립을 고려한 이동",
-      "인간–로봇 협력 제어",
+      "Motion-State Estimation from Onboard Sensing",
+      "Robot Motion and Dynamic Modeling",
+      "Data-Driven Robot Dynamics Modeling",
+      "Sensorless Disturbance Estimation",
+      "Slip-Aware Mobility",
+      "Human–Robot Cooperative Control",
       "Adaptive Trajectory Tracking Control of a Mobile Robot Using Data-Driven Motion Response Modeling",
       "Side-Slope Stabilization of a Mobile Robot Under Payload Variations With Mass and Stroke Constraints",
       "Obstacle Traversal With a Variable-Length Active Spoke Wheel Mechanism"
