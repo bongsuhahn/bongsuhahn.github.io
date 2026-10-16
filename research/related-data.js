@@ -37,7 +37,10 @@ const ROCOS_RESEARCH_RELATIONS = {
       ]
     },
     "directions": [
-      "Data-Driven Dynamic Modeling and Sensorless Joint-Torque Estimation for Collision-Aware Control of a Six-DOF Manipulator"
+      "Data-Driven Dynamic Modeling and Sensorless Joint-Torque Estimation for Collision-Aware Control of a Six-DOF Manipulator",
+      "Perception-Guided Robotic Grasping With Adaptive Grip Force Control Using Soft Actor-Critic",
+      "Adaptive Trajectory Tracking Control of a Mobile Robot Using Data-Driven Motion Response Modeling",
+      "Side-Slope Stabilization of a Mobile Robot Under Payload Variations With Mass and Stroke Constraints"
     ]
   },
   "mobile-robotics": {
@@ -80,7 +83,10 @@ const ROCOS_RESEARCH_RELATIONS = {
       "Data-Driven Robot Dynamics Modeling",
       "Sensorless Disturbance Estimation",
       "Slip-Aware Mobility",
-      "Human–Robot Cooperative Control"
+      "Human–Robot Cooperative Control",
+      "Adaptive Trajectory Tracking Control of a Mobile Robot Using Data-Driven Motion Response Modeling",
+      "Side-Slope Stabilization of a Mobile Robot Under Payload Variations With Mass and Stroke Constraints",
+      "Obstacle Traversal With a Variable-Length Active Spoke Wheel Mechanism"
     ]
   },
   "autonomous-navigation": {
@@ -155,7 +161,8 @@ const ROCOS_RESEARCH_RELATIONS = {
       "Observability-Informed Low-Order Nonlinear State-Space Modeling and Estimation for Plasma Etching",
       "Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte",
       "Adaptive Endpoint Detection Modeling under Limited and Imbalanced Plasma Etching Data",
-      "OES-Supported State-Constrained Recipe Optimization for Mean Thickness and Uniformity Control in Plasma Etching"
+      "OES-Supported State-Constrained Recipe Optimization for Mean Thickness and Uniformity Control in Plasma Etching",
+      "Adaptive Trajectory Tracking Control of a Mobile Robot Using Data-Driven Motion Response Modeling"
     ]
   }
 };
